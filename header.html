@@ -9,7 +9,7 @@
       <img src="images/icn_language.svg" />
       English
     </a>
-    <a href="" class="nav_btn">
+    <a data-bs-toggle="modal" data-bs-target="#location"  type="button"  class="nav_btn">
       <img src="images/icn_language.svg" />
       English
     </a>
@@ -20,7 +20,6 @@
       aria-controls="head-nav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse nav-head" id="head-nav">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active"> <a href="movies.html">Movies</a>
@@ -43,11 +42,56 @@
 
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <div class="head_search_hdr">
-            <img class="img" src="images/icn_search.svg" />
-            <input class="input" type="search" placeholder="Search" aria-label="Search">
-          </div>
+          <div class="head_search_wrap">
+            <div class="head_search_hdr">
+              <img class="img" src="images/icn_search.svg" />
+              <input class="input" type="search" placeholder="Search" aria-label="Search">
+            </div>
+            <div class="search_result">
+              <div class="head">Recently Searched</div>
+              <ul>
+                <li>
+                  <a href="">
+                    <img class="icn recent" src="images/icn_recent.svg" />
+                    <span> One Piece </span>
+                    <img class="icn" src="images/icn_arr.svg" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img class="icn recent" src="images/icn_recent.svg" />
+                    <span> Ticket to Paradise</span>
+                    <img class="icn" src="images/icn_arr.svg" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img class="icn recent" src="images/icn_recent.svg" />
+                    <span> Lipo</span>
+                    <img class="icn" src="images/icn_arr.svg" />
+                  </a>
+                </li>
+              </ul>
+              <div class="head">Popular Search</div>
+              <ul>
+                <li>
+                  <a href="">
+                    <img class="icn recent" src="images/icn_movie.svg" />
+                    <span>Ticket to Paradise </span>
+                    <img class="icn" src="images/icn_arr.svg" />
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img class="icn recent" src="images/icn_movie.svg" />
+                    <span> Ashiap Man</span>
+                    <img class="icn" src="images/icn_arr.svg" />
+                  </a>
+                </li>
 
+              </ul>
+            </div>
+          </div>
         </li>
         <li class=""><a class="btn" href="register.html">Join Us</a></li>
       </ul>
