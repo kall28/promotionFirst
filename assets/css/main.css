@@ -171,12 +171,15 @@ a {
 .header .nav_btn_top_hdr .link {
     color: var(--white);
 }
-.nav_btn_top_hdr .log_hdr{
-    display: block;
-}
-.nav_btn_top_hdr .log_reg_hdr{
+
+.nav_btn_top_hdr .log_hdr {
     display: none;
 }
+
+.nav_btn_top_hdr .log_reg_hdr {
+    display: block;
+}
+
 .header .nav_btn_top_hdr .link .log_initial {
     border-radius: 100px;
     width: 30px;

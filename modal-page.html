@@ -76,3 +76,196 @@
     </div>
   </div>
 </div>
+
+<div id="modalReg" class="modal fade" tabindex="-1" aria-labelledby="payModal" aria-hidden="true">
+  <div class="modal-dialog modal_sign_hdr">
+    <div class="modal-content ">
+      <!-- <div class="modal-header">
+        <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body">
+
+        <div class="sign_hdr">
+
+          <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <div class="center">
+            <div class="head">
+              Sign Up
+            </div>
+            <div class="title">Already Have an Account? <a data-bs-target="#modalLogin" data-bs-toggle="modal">Log
+                in</a></div>
+          </div>
+          <!-- <div class="form_wrap" id="needs-validation" novalidate> -->
+          <form class="form_wrap" id="needs-validation" novalidate>
+            <div class="form-group">
+              <label>Full Name<span>*</span></label>
+              <input placeholder=" Enter your full name" required />
+              <div class="invalid-feedback">
+                Please provide a Name.
+              </div>
+            </div>
+            <div class="form_row">
+              <div class="form-group">
+                <label>Email<span>*</span></label>
+                <input placeholder=" Enter your Email" required />
+                <div class="invalid-feedback">
+                  Please provide a valid Email.
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Phone Number<span>*</span></label>
+                <input placeholder=" Enter your phone number" required />
+                <div class="invalid-feedback">
+                  Please provide a valid Phone No.
+                </div>
+              </div>
+            </div>
+            <div class="form_row">
+              <div class="form-group">
+                <label>Password<span>*</span></label>
+                <input id='confirm-password' placeholder=" Enter your Password" required type="password" />
+                <a toggle="#confirm-password" class="field-icon toggle-password"><span
+                    class="material-icons">visibility_off</span>
+                </a>
+                <div class="invalid-feedback">
+                  Set Password
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Confirm Password<span>*</span></label>
+                <input id='confirm-password' placeholder=" Enter your Password" required type="password" />
+                <a toggle="#confirm-password" class="field-icon toggle-password"><span
+                    class="material-icons">visibility_off</span>
+                </a>
+                <div class="invalid-feedback">
+                  Set Password
+                </div>
+              </div>
+            </div>
+            <div class="form_row_chk">
+              <input class="checkbox" type="checkbox" />
+              I Agree To The <a href="">Terms and Conditions</a>
+            </div>
+            <div class="captcha">
+              <div class="form_row_chk">
+                <input class="checkbox" type="checkbox" />
+                I’m not a robot
+              </div>
+              <img class="icn" src="images/temp/recaptcha.png">
+            </div>
+            <button onclick="location.href = 'signin_verificaiton.html'" type="submit" class="btn">Next</button>
+          </form>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modalLogin" class="modal fade" tabindex="-1" aria-labelledby="payModal" aria-hidden="true">
+  <div class="modal-dialog modal_sign_hdr">
+    <div class="modal-content ">
+      <!-- <div class="modal-header">
+        <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body">
+        <div class="sign_hdr">
+          <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <div class="center">
+            <div class="head">
+              Log in
+            </div>
+            <div class="title">Don’t have an account? <a data-bs-target="#modalReg" data-bs-toggle="modal">Sign up</a></div>
+          </div>
+          <!-- <div class="form_wrap" id="needs-validation" novalidate> -->
+          <form class="form_wrap" id="needs-validation" novalidate>
+            <div class="form-group form-row-hdr">
+              <label>Email</label>
+              <input placeholder=" Enter your full name" required />
+              <div class="invalid-feedback">
+                Enter correct Email ID
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input placeholder=" Enter your Password" required id='confirm-password' type="password" />
+              <a toggle="#confirm-password" class="field-icon toggle-password"><span
+                  class="material-icons">visibility_off</span>
+              </a>
+              <div class="invalid-feedback">
+                Enter correct Password
+              </div>
+            </div>
+            <a class="title link">Forgot password?</a>
+            <div class="captcha">
+              <div class="form_row_chk">
+                <input class="checkbox" type="checkbox" />
+                I’m not a robot
+              </div>
+              <img class="icn" src="images/temp/recaptcha.png">
+            </div>
+            <button type="submit" class="btn ">Log in</button>
+            <div class="strike_tx_hdr">
+              <span>or sign in with</span>
+            </div>
+            <div class="form_row">
+              <a href="" class="log-social-btn">
+                <img src="images/icn_google.png" />
+              </a>
+              <a href="" class="log-social-btn">
+                <img src="images/icn_facebook.png" />
+              </a>
+            </div>
+          </form>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modalotpVerify" class="modal fade" tabindex="-1" aria-labelledby="payModal" aria-hidden="true">
+  <div class="modal-dialog modal_sign_hdr">
+    <div class="modal-content ">
+      <!-- <div class="modal-header">
+        <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body">
+        <div class="sign_hdr">
+          <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+
+          <section class="sign_wrap_veri page_hdr">
+            <a class="head_icn" href=""><img class="" src="images/icn_arrow_up.svg" /></a>
+            <div class="sign_veri_hdr otp_hdr">
+                <div class="content">
+                    <div class="head">OTP Code Verification </div>
+                    <p class="title">We have sent an OTP to <strong>+622334176777</strong>. Please fill OTP Code in the
+                        field below.</p>
+                </div>
+
+                <div class="pin-wrapper">
+                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                </div>
+                <!-- <div class="pin"></div> -->
+                <div class="pin_otp_hdr">
+                    <div class="title">0:90</div>
+                    <div class="title">
+                        Not Receiving OTP Code? <a href="" class="link">Resend</a>
+                    </div>
+                    <a class="btn" href="my-bookinngs.html">
+                        Submit
+                    </a>
+                </div>
+            </div>
+        </section>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
