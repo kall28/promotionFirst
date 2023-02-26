@@ -19,6 +19,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 
   <!-- new  css -->
+  <link rel="stylesheet" type="text/css" href="assets/owlcarousel/owl_custom.css">
+  <link rel="stylesheet" type="text/css" href="assets/owlcarousel/css/owl.carousel.min.css">
 
   <!-- <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"> -->
   <link rel="stylesheet" type="text/css" href="assets/css/theme.min.css">
@@ -77,8 +79,7 @@
         </div>
       </div>
     </section>
-
-    <section class="cin_list_wrap">
+    <section class="cin_list_wrap cin_list_detail">
       <div class="accordion accor_wrap" id="cinema_01">
         <div class="accordion-item">
           <h2 class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -241,30 +242,32 @@
       <div class="heading">
         Kelas Bioskop yang Tersedia
       </div>
-      <div class="cin_banr_wrap list_col">
-        <div class="cin_banr_hdr">
-          <div class="content">
-            <img src="images/temp/cin_logo.png" />
-            <div class="title">Pengalaman menonton film yang mewah sambil menikmati santapan berkelas</div>
-            <a class="btn">Telusuri</a>
+      <div class="cin_banr_wrap list_col  ">
+        <div class="cinema_recom owl-carousel">
+          <div class="cin_banr_hdr">
+            <div class="content">
+              <img src="images/temp/cin_logo.png" />
+              <div class="title">Pengalaman menonton film yang mewah sambil menikmati santapan berkelas</div>
+              <a class="btn">Telusuri</a>
+            </div>
+            <img class="thumb" src="images/temp/cin_thumb_04.jpg" />
           </div>
-          <img class="thumb" src="images/temp/cin_thumb_04.jpg" />
-        </div>
-        <div class="cin_banr_hdr">
-          <div class="content">
-            <img src="images/temp/cin_logo.png" />
-            <div class="title">Pengalaman menonton film yang mewah sambil menikmati santapan berkelas</div>
-            <a class="btn">Telusuri</a>
+          <div class="cin_banr_hdr">
+            <div class="content">
+              <img src="images/temp/cin_logo.png" />
+              <div class="title">Pengalaman menonton film yang mewah sambil menikmati santapan berkelas</div>
+              <a class="btn">Telusuri</a>
+            </div>
+            <img class="thumb" src="images/temp/cin_thumb_05.jpg" />
           </div>
-          <img class="thumb" src="images/temp/cin_thumb_05.jpg" />
-        </div>
-        <div class="cin_banr_hdr">
-          <div class="content">
-            <img src="images/temp/cin_logo.png" />
-            <div class="title">Pengalaman menonton film yang mewah sambil menikmati santapan berkelas</div>
-            <a class="btn">Telusuri</a>
+          <div class="cin_banr_hdr">
+            <div class="content">
+              <img src="images/temp/cin_logo.png" />
+              <div class="title">Pengalaman menonton film yang mewah sambil menikmati santapan berkelas</div>
+              <a class="btn">Telusuri</a>
+            </div>
+            <img class="thumb" src="images/temp/cin_thumb_06.jpg" />
           </div>
-          <img class="thumb" src="images/temp/cin_thumb_06.jpg" />
         </div>
       </div>
     </section>
@@ -272,24 +275,83 @@
       <div class="heading">
         Fasilitas
       </div>
-      <div class="cin_banr_wrap list_col page_hdr">
-        <div class="bannr_wrap">
-          <div class="tabs">
-            <a href="">POPCORN ZONE</a>
-            <a href="" class="active">Tempat Menunggu yang nyaman</a>
-            <a href="">STUDIO</a>
-          </div>
-          <img class="thumb" src="images/temp/cin_ban_03.jpg" />
-        </div>
+      <div class="faci_wrap_banr page_hdr">
+        <div class="faci_hdr_banr">
+          <div class="outer">
+            <div id="faciBig" class="owl-carousel owl-theme big">
+              <div class="item">
+                <img class="cine_img" src="images/static/cinema_img_01.jpg" />
+              </div>
+              <div class="item">
+                <img class="cine_img" src="images/static/cinema_img_02.jpg" />
+              </div>
+              <div class="item">
+                <img class="cine_img" src="images/static/cinema_img_03.jpg" />
+              </div>
+              <div class="item">
+                <img class="cine_img" src="images/static/cinema_img_01.jpg" />
+              </div>
+            </div>
+            <div id="faciThumbs" class="owl-carousel owl-theme thumbs">
+              <div class="item">
+                <div class="head">POPCORN ZONE</div>
+                <div class="title">
+                  Tempat Menunggu yang nyaman</div>
+              </div>
+              <div class="item">
+                <div class="head">LOUNGE</div>
+                <div class="title">
+                  Tempat Menunggu yang nyaman</div>
+              </div>
+              <div class="item">
+                <div class="head">STUDIO</div>
+                <div class="title">
+                  Tempat Menunggu yang nyaman</div>
+              </div>
+              <div class="item">
+                <div class="head">POPCORN ZONE02</div>
+                <div class="title">
+                  Tempat Menunggu yang nyaman</div>
+              </div>
 
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- <div class="faci_wrap_banr page_hdr">
+        <div class="faci_hdr_banr">
+          <div class="nav nav-tabs" role="tablist">
+            <a href="#popcorn" aria-controls="home" class="active" role="tab" data-bs-toggle="tab">
+              POPCORN ZONE</a>
+            <a href="#lounge" aria-controls="profile" role="tab" data-bs-toggle="tab">
+              <div class="head">LOUNGE</div>
+              <div class="title">
+                Tempat Menunggu yang nyaman</div>
+            </a>
+            <a href="#studio" aria-controls="profile" role="tab" data-bs-toggle="tab">
+              STUDIO</a>
+          </div>
+          <div class="tab-content  ">
+            <div role="tabpanel " class="tab-pane " id="popcorn">
+              <img class="thumb" src="images/temp/cin_ban_03.jpg" />
+            </div>
+            <div role="tabpanel " class="tab-pane active" id="lounge">
+              <img class="thumb" src="images/temp/cin_banner_02.jpg" />
+            </div>
+            <div role="tabpanel " class="tab-pane " id="studio">
+              <img class="thumb" src="images/temp/cin_ban_03.jpg" />
+            </div>
+          </div>
+        </div>
+      </div> -->
     </section>
     <section class="cin_banr_wrap">
       <div class="heading">
         Bioskop Lainnya
       </div>
-      <div class="cin_list">
-        <a class="cin_hdr">
+      <div class="cin_list cinema_slider owl-carousel">
+        <a class="cin_hdr" href="cinema-detail.html">
           <img class="thumb" src="images/temp/cin_thumb_04.jpg" />
           <div class="content">
             <div class="head">Lippo Plaza Kebun Raya</div>
@@ -303,8 +365,8 @@
             </div>
           </div>
         </a>
-        <hr />
-        <a class="cin_hdr">
+
+        <a class="cin_hdr" href="cinema-detail.html">
           <img class="thumb" src="images/temp/cin_thumb_04.jpg" />
           <div class="content">
             <div class="head">Lippo Plaza Kebun Raya</div>
@@ -318,8 +380,36 @@
             </div>
           </div>
         </a>
-        <hr />
-        <a class="cin_hdr">
+
+        <a class="cin_hdr" href="cinema-detail.html">
+          <img class="thumb" src="images/temp/cin_thumb_04.jpg" />
+          <div class="content">
+            <div class="head">Lippo Plaza Kebun Raya</div>
+            <div class="title">
+              <img class="icn" src="images/icn_location.svg" />
+              Jl. Siliwangi, RW.04, Sukasari
+            </div>
+            <div class="title">
+              <img class="icn" src="images/icn_call.svg" />
+              021 7225498
+            </div>
+          </div>
+        </a>
+        <a class="cin_hdr" href="cinema-detail.html">
+          <img class="thumb" src="images/temp/cin_thumb_04.jpg" />
+          <div class="content">
+            <div class="head">Lippo Plaza Kebun Raya</div>
+            <div class="title">
+              <img class="icn" src="images/icn_location.svg" />
+              Jl. Siliwangi, RW.04, Sukasari
+            </div>
+            <div class="title">
+              <img class="icn" src="images/icn_call.svg" />
+              021 7225498
+            </div>
+          </div>
+        </a>
+        <a class="cin_hdr" href="cinema-detail.html">
           <img class="thumb" src="images/temp/cin_thumb_04.jpg" />
           <div class="content">
             <div class="head">Lippo Plaza Kebun Raya</div>
@@ -351,8 +441,18 @@
   <!-- latest jquery-->
   <script defer src="assets/js/jquery-3.5.1.min.js"></script>
   <script defer src="assets/js/custom.js"></script>
-
+  <script defer src="assets/owlcarousel/owl.carousel.min.js"></script>
   <script defer src="assets/js/bootstrap.min.js"></script>
+  <script defer src="assets/js/swiper.js"></script>
+  <script defer src="assets/js/slick.js"></script>
+  <script defer src="assets/js/smooth-scroll.polyfills.min.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/script.js"></script>
+  <script defer src="assets/owlcarousel/owl_custom.js"></script>
+
+  <!-- font -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </body>
 
 </html>

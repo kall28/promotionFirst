@@ -76,6 +76,7 @@
     </div>
   </div>
 </div>
+<!-- register modal -->
 
 <div id="modalReg" class="modal fade" tabindex="-1" aria-labelledby="payModal" aria-hidden="true">
   <div class="modal-dialog modal_sign_hdr">
@@ -154,7 +155,8 @@
               </div>
               <img class="icn" src="images/temp/recaptcha.png">
             </div>
-            <button onclick="location.href = 'signin_verificaiton.html'" type="submit" class="btn">Next</button>
+            <button data-bs-dismiss="modal" data-bs-target="#modalotpVerify" data-bs-toggle="modal" type="submit"
+              class="btn">Next</button>
           </form>
           <!-- </div> -->
         </div>
@@ -162,6 +164,7 @@
     </div>
   </div>
 </div>
+<!-- login modal -->
 <div id="modalLogin" class="modal fade" tabindex="-1" aria-labelledby="payModal" aria-hidden="true">
   <div class="modal-dialog modal_sign_hdr">
     <div class="modal-content ">
@@ -176,7 +179,8 @@
             <div class="head">
               Log in
             </div>
-            <div class="title">Don’t have an account? <a data-bs-target="#modalReg" data-bs-toggle="modal">Sign up</a></div>
+            <div class="title">Don’t have an account? <a data-bs-target="#modalReg" data-bs-toggle="modal">Sign up</a>
+            </div>
           </div>
           <!-- <div class="form_wrap" id="needs-validation" novalidate> -->
           <form class="form_wrap" id="needs-validation" novalidate>
@@ -224,7 +228,7 @@
     </div>
   </div>
 </div>
-
+<!-- sign veriffication -->
 <div id="modalotpVerify" class="modal fade" tabindex="-1" aria-labelledby="payModal" aria-hidden="true">
   <div class="modal-dialog modal_sign_hdr">
     <div class="modal-content ">
@@ -235,36 +239,130 @@
         <div class="sign_hdr">
           <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close"></button>
 
-          <section class="sign_wrap_veri page_hdr">
-            <a class="head_icn" href=""><img class="" src="images/icn_arrow_up.svg" /></a>
+          <section class="sign_wrap_veri ">
             <div class="sign_veri_hdr otp_hdr">
-                <div class="content">
-                    <div class="head">OTP Code Verification </div>
-                    <p class="title">We have sent an OTP to <strong>+622334176777</strong>. Please fill OTP Code in the
-                        field below.</p>
-                </div>
+              <div class="content">
+                <div class="head">OTP Code Verification </div>
+                <p class="title">We have sent an OTP to <strong>+622334176777</strong>. Please fill OTP Code in the
+                  field below.</p>
+              </div>
 
-                <div class="pin-wrapper">
-                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
-                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
-                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
-                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
-                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
+              <div class="pin-wrapper">
+                <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                <input type="text" data-role="pin" maxlength="1" class="pin-input">
+              </div>
+              <!-- <div class="pin"></div> -->
+              <div class="pin_otp_hdr">
+                <div class="title">0:90</div>
+                <div class="title">
+                  Not Receiving OTP Code? <a href="" class="link">Resend</a>
                 </div>
-                <!-- <div class="pin"></div> -->
-                <div class="pin_otp_hdr">
-                    <div class="title">0:90</div>
-                    <div class="title">
-                        Not Receiving OTP Code? <a href="" class="link">Resend</a>
-                    </div>
-                    <a class="btn" href="my-bookinngs.html">
-                        Submit
-                    </a>
-                </div>
+                <a class="btn" href="seatLayout.html">
+                  Submit
+                </a>
+              </div>
             </div>
-        </section>
+          </section>
           <!-- </div> -->
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- tnc schedule -->
+<div id="tncSchdule" class="modal fade" tabindex="-1" aria-labelledby="payModal" aria-hidden="true">
+  <div class="modal-dialog modal_sign_hdr">
+    <div class="modal-content ">
+      <!-- <div class="modal-header">
+        <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body">
+        <div class="sign_hdr">
+          <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+          <section class="sign_wrap_veri ">
+            <div class="sign_veri_hdr tncSchduleMod otp_hdr">
+              <div class="content">
+                <div class="head">Junior Class Terms & Conditions </div>
+                <ol>
+                  <li>
+                    Every child is welcome to enter and play at Cinépolis Junior</li>
+                  <li>
+                    Child must be accompanied by an adult to prevent accidents if their age is not as required</li>
+                  <li>
+                    The minimum height should be 90 cm for unaccompanied child</li>
+                  <li>
+                    The minimum height for playing at slider should be 110 cm</li>
+                  <li>
+                    No outside food and drinks allowed</li>
+                  <li>
+                    Cinépolis is not liable for any injuries that happened in the play area</li>
+                </ol>
+              </div>
+          </section>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- tnc announce -->
+<div id="tncAnnounce" class="modal fade" tabindex="-1" aria-labelledby="payModal" aria-hidden="true">
+  <div class="modal-dialog modal_tncAnnounce">
+    <div class="modal-content ">
+      <!-- <div class="modal-header">
+        <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body">
+        <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close">
+
+        </button>
+        <div class="banr"><img src="images/static/annonc_ban.jpg" /></div>
+        <section class="modal_tncAnnounce_hdr ">
+          <div class="">
+            <div class="content">
+              <div class="head">Rules to Watch Movies During Pandemic </div>
+              <ol>
+                <li>
+                  Keep masks on at all time. Double-masking is better.</li>
+                <li>
+                  Physical distancing</li>
+                <li>
+                  Keep hands clean. Bringing your own hand sanitizer is a good idea.</li>
+                <li>
+                  Have the PeduliLindungi app installed on your phone.</li>
+                <li>
+                  Scan the QR code for PeduliLindungi before entering the cinema.</li>
+                <li>
+                  No visitors under 12 years old.</li>
+              </ol>
+            </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- trailer -->
+<div id="modTrail" class="modal fade" tabindex="-1" aria-labelledby="payModal" aria-hidden="true">
+  <div class="modal-dialog modTrail modal-dialog-centered">
+    <div class="modal-content ">
+      <!-- <div class="modal-header">
+        <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body">
+        <button type="button" class="btn-close mod-btn" data-bs-dismiss="modal" aria-label="Close">
+
+        </button>
+        <section class="trailer ">
+          <iframe width="660" height="415" src="https://www.youtube.com/embed/bgIlyb_g63s?rel=0?modestbranding=0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </section>
       </div>
     </div>
   </div>

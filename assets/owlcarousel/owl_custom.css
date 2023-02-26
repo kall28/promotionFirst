@@ -5,6 +5,9 @@
     height: 690px;
     width: 1322px;
 }
+.outer .owl-theme .owl-nav [class*='owl-'].disabled:hover{
+    background-color: transparent;
+}
 .thumbs{
     position: absolute;
     bottom: 100px;

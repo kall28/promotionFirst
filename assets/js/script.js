@@ -231,7 +231,6 @@ var Swipes = new Swiper('.swiper-container', {
 });
 
 // carousal 2
-
 var $owl = $('.owl-carousel');
 
 $owl.children().each(function (index) {
@@ -251,7 +250,44 @@ $(".movieSlider").owlCarousel({
 
 });
 
+$(".dateHdr").owlCarousel({
+  // $owl.owlCarousel({
+  dots: false,
+  loop: false,
+  autoplay: false,
+  nav: true,
+  pagination: true,
+  items: 4,
+  margin:10,
+  navText: ["<img src='../../images/icn_arrw_left.svg'>", "<img src='../../images/icn_arrw_right.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+});
+
+$(".cinema_slider").owlCarousel({
+  // $owl.owlCarousel({
+  dots: true,
+  loop: true,
+  autoplay: true,
+  nav: true,
+  pagination: true,
+  items: 3,
+  navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
 // $(document).on('click', '.owl-item>div', function () {
 //   $owl.trigger('to.owl.carousel', $(this).data('position'));
 // });
+// cinema recomend
+$(".cinema_recom").owlCarousel({
+  // $owl.owlCarousel({
+  dots: false,
+  loop: false,
+  autoplay: false,
+  nav: true,
+  pagination: false,
+  items: 3,
+  navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 
+});
