@@ -237,6 +237,20 @@ $owl.children().each(function (index) {
   $(this).attr('data-position', index);
 });
 
+
+$(".banner_wrap_car").owlCarousel({
+  // $owl.owlCarousel({
+  dots: true,
+  loop: false,
+  autoplay: false,
+  nav: true,
+  pagination: true,
+  items: 1,
+  navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
+
 $(".movieSlider").owlCarousel({
   // $owl.owlCarousel({
   dots: true,
@@ -258,7 +272,7 @@ $(".dateHdr").owlCarousel({
   nav: true,
   pagination: true,
   items: 4,
-  margin:10,
+  margin: 10,
   navText: ["<img src='../../images/icn_arrw_left.svg'>", "<img src='../../images/icn_arrw_right.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 });
@@ -287,6 +301,18 @@ $(".cinema_recom").owlCarousel({
   nav: true,
   pagination: false,
   items: 3,
+  navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
+$(".offer-wrap").owlCarousel({
+  // $owl.owlCarousel({
+  dots: false,
+  loop: false,
+  autoplay: false,
+  nav: true,
+  pagination: false,
+  items: 2,
   navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 

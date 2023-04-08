@@ -25,9 +25,9 @@
 
     $(window).on('load', function () {
         setTimeout(function () {
-            $('.loader-wrapper, .skeleton_loader').fadeOut('slow');
-        }, 100);
-        $('.loader-wrapper, .skeleton_loader').remove('slow');
+            $('.loader-wrapper').fadeOut('slow');
+        }, 1000);
+        $('.loader-wrapper').remove('slow');
     });
 
     /*=====================
@@ -1059,3 +1059,11 @@ $(function () {
         for (var t = 0; t < e.length; t++)
             lightGallery(e[t], { selector: "this", download: !1, videojs: !0, youtubePlayerParams: { modestbranding: 1, showinfo: 0, rel: 0 }, vimeoPlayerParams: { byline: 0, portrait: 0, color: "fd5631" } });
 })();
+
+
+// 15. Read More
+
+$('.show-btn').click(function() {
+    $('.text-container').toggleClass("show");
+    $(this).toggleClass("rotate");
+});
