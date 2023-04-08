@@ -209,7 +209,10 @@ a {
 .nav_btn_top_hdr .log_reg_hdr {
     display: block;
 }
-
+.nav_btn_top_hdr {
+    display: flex;
+    justify-content: space-between;
+}
 .header .nav_btn_top_hdr .link .log_initial {
     border-radius: 100px;
     width: 30px;
