@@ -1067,3 +1067,4 @@ $('.show-btn').click(function() {
     $('.text-container').toggleClass("show");
     $(this).toggleClass("rotate");
 });
+

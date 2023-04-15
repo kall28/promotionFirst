@@ -308,12 +308,28 @@ $(".cinema_recom").owlCarousel({
 $(".offer-wrap").owlCarousel({
   // $owl.owlCarousel({
   dots: false,
-  loop: false,
+  loop: true,
   autoplay: false,
   nav: true,
-  pagination: false,
+  // pagination: true,
   items: 2,
-  navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
+  margin: 10,
+  navText: ["<img src='../../images/icn_btn_leftArr.svg'>", "<img src='../../images/icn_btn_rightArr.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 
 });
+
+$(".fan-banner").owlCarousel({
+  // $owl.owlCarousel({
+  dots: false,
+  loop: false,
+  autoplay: false,
+  nav: true,
+  // pagination: true,
+  items: 1,
+  navText: ["<img src='../../images/icn_btn_leftArr.svg'>", "<img src='../../images/icn_btn_rightArr.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
+
+

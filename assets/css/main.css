@@ -24,7 +24,9 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #00000063; */
+    /* background-color: #fffffffa;
+    z-index: 5;
+    opacity: .9; */
 }
 
 .loader-wrapper img {
@@ -124,6 +126,11 @@ a {
 
 }
 
+button {
+    border: none;
+    background-color: transparent;
+}
+
 /* common end*/
 .btn {
     background-color: var(--primary);
@@ -203,16 +210,18 @@ a {
 }
 
 .nav_btn_top_hdr .log_hdr {
-    display: none;
+    /* display: none;*/
 }
 
 .nav_btn_top_hdr .log_reg_hdr {
-    display: block;
+    display: none;
 }
+
 .nav_btn_top_hdr {
     display: flex;
     justify-content: space-between;
 }
+
 .header .nav_btn_top_hdr .link .log_initial {
     border-radius: 100px;
     width: 30px;
@@ -273,6 +282,7 @@ a {
 
 .nav-head .navbar-nav .nav-item {
     padding-right: 25px;
+    position: relative;
 }
 
 .navbar_wrap .nav-item.nav_drop a {
@@ -823,6 +833,10 @@ a {
     position: relative;
 }
 
+.cine_wrap .banner_hdr {
+    height: 400px;
+}
+
 .cine_wrap .content {
     position: absolute;
     top: 40%;
@@ -935,20 +949,20 @@ a {
 }
 
 .show-btn {
-       /* box-shadow: 0 2px 5px rgba(0, 0, 0, .6); */
-       border: none;
-       border-radius: 100%;
-       bottom: -15px;
-       color: #fff;
-       cursor: pointer;
-       height: 40px;
-       right: -70px;
-       margin-left: -20px;
-       position: absolute;
-       transition: background-color .25s ease;
-       /* width: 40px; */
-       font-size: 20px;
-       font-size: var(--ft16);
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, .6); */
+    border: none;
+    border-radius: 100%;
+    bottom: -15px;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    right: -70px;
+    margin-left: -20px;
+    position: absolute;
+    transition: background-color .25s ease;
+    /* width: 40px; */
+    font-size: 20px;
+    font-size: var(--ft16);
 }
 
 .show-btn::after {
@@ -1038,6 +1052,7 @@ a {
     left: 0px;
     width: 80%;
     margin: auto;
+    z-index: 1;
 }
 
 .widget_hdr .selet_dt_hdr .dateHdr .owl-nav {
@@ -1774,9 +1789,45 @@ a {
 
 }
 
+.offer-wrap_1 .owl-nav {
+    position: absolute;
+    z-index: 1;
+    top: 92px;
+    right: 10px;
+}
+
+.offer-wrap_1 .owl-nav button {
+    border: none;
+    background-color: transparent;
+}
+
+.promo-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secndary_100);
+    border-radius: var(--radius);
+    height: 45px;
+    gap: 10px;
+}
+
+.promo-status .head {
+    color: var(--primary);
+    padding: 0px;
+    font-size: var(--ft16);
+
+}
+
 .offer-wrap {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
+    height: 200px;
+}
+
+.offer-wrap .owl-item {
+    float: left;
 }
 
 .offer-hdr {
@@ -1784,6 +1835,7 @@ a {
     background-color: var(--black_90);
     padding: 10px 20px;
     width: 100%;
+    display: inline-block;
 }
 
 .offer-hdr .offer-name {
@@ -4909,12 +4961,141 @@ a {
 }
 
 /* modal end */
+.phase_two {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fans */
+.fan_banner {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+
+}
+
+.fan_banner .slider_wrap .btn_brd_w{
+    margin-right: 20px;
+}
+.fan_banner .slider_wrap {
+    height: 70px;
+    background-color: var(--primary);
+    position: absolute;
+    bottom: 50px;
+    z-index: 1;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+}
+
+
+.fan_banner .fan_card_hdr {
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+    width: 260px;
+
+}
+
+.fan_banner .fan_ban_hdr {
+    position: relative;
+    top: 50px;
+    height: 320px;
+}
+
+.fan_banner .fan_card_hdr .title {
+    color: var(--white);
+    position: absolute;
+    bottom: 30px;
+    left: 10%;
+    letter-spacing: 4px;
+    font-weight: bold;
+
+}
+
+.fan_banner .card_img {
+    /* position: absolute;
+    right: 60px; */
+}
+
+.fan_banner .content_hdr.cust .icon {
+    opacity: .5;
+}
+
+.fan_banner .content_hdr .icon {
+    width: 70px;
+    height: 70px;
+}
+
+.fan_banner .content_hdr .gropie img{
+    margin-right: 10px;
+}
+.fan_banner .content_hdr .gropie{
+    background-color: var(--black_200);
+
+}
+.fan_banner .content_hdr {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.fan_banner .cont_wrap {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.fan_banner .content_hdr a {
+    margin-top: 10px;
+}
+
+.fan_banner .content_hdr .title {
+    margin-bottom: 5px;
+}
+
+.fan_banner .content_hdr.cust .head {
+    color: var(--black_500);
+}
+
+.fan_banner .content_hdr .head {
+    font-size: var(--ft32);
+    color: var(--black);
+}
+.fan-banner{
+    overflow: hidden;
+    position: relative;
+}
+.fan-banner .owl-nav {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    z-index: 1;
+}
+.fan-banner .owl-stage {
+    display: flex;
+    overflow: hidden;
+}
+
+/* fans end */
 /* mobile */
+@media (min-width: 992px) {
+
+    .navbar-expand-lg .dropdown-menu.show {
+        display: block;
+    }
+}
 
 @media only screen and (max-width: 600px) {
     .header .navbar .collapse:not(.show) {
         display: none;
     }
 }
-
-/* last updated kalpesh 27 Monday Time 103PM */
