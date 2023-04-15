@@ -275,9 +275,9 @@ button {
 }
 
 .headerBg {
-    background-image: url(../../images/bg_hdr.jpg);
+    /* background-image: url(../../images/bg_hdr.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%; */
 }
 
 .nav-head .navbar-nav .nav-item {
@@ -853,8 +853,8 @@ button {
 
 /* cinema section lp end*/
 .footer {
-    background: url(../../images/ft_bg.jpg);
-    background-repeat: no-repeat;
+    /* background: url(../../images/ft_bg.jpg);
+    background-repeat: no-repeat; */
     /* height: 244px; */
 }
 
@@ -3177,8 +3177,8 @@ button {
 /* cinema page end*/
 /* register */
 .sign_wrap {
-    background: url(../../images/sign_bg.jpg);
-    background-repeat: no-repeat;
+    /* background: url(../../images/sign_bg.jpg);
+    background-repeat: no-repeat; */
     display: flex;
     justify-content: space-around;
     padding: 50px 0px;
@@ -4775,7 +4775,7 @@ button {
 /* swiper end */
 /* member fan */
 .pg_bg {
-    background-image: url(../../images/static/home_bg.jpg);
+    /* background-image: url(../../images/static/home_bg.jpg); */
     /* background-position-y: bottom; */
 }
 
