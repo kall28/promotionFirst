@@ -251,6 +251,7 @@ $(".banner_wrap_car").owlCarousel({
 
 });
 
+
 $(".movieSlider").owlCarousel({
   // $owl.owlCarousel({
   dots: true,
