@@ -6040,12 +6040,14 @@ button {
     border: 1px solid var(--black_100);
     border-radius: var(--radius);
 }
-.form_hdr.kredio .row_hdr .select_hdr select{
+
+.form_hdr.kredio .row_hdr .select_hdr select {
     width: 100%;
-    border:  none;
+    border: none;
     height: 35px;
 
 }
+
 .form_hdr.kredio .row_hdr .form-group {
     width: 100%;
 }
@@ -6056,8 +6058,17 @@ button {
 .modal-dialog.modal_tncAnnounce {
     max-width: 600px;
 }
+
 /* modal end */
 /* mobile */
+@media (max-width: 1200px) {
+
+    .page-wrapper, .header.headerBg,
+    .header.sticky-top {
+        width: 1200px;
+    }
+}
+
 @media (min-width: 992px) {
 
     .navbar-expand-lg .dropdown-menu.show {
