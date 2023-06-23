@@ -334,3 +334,43 @@ $(".fan-banner").owlCarousel({
 });
 
 
+$(".movie_class").owlCarousel({
+  center: true,
+  items:2,
+  loop:true,
+  autoWidth:true,
+  margin:100,
+   nav: true,
+  // autoplay: false,
+  // pagination: false,
+  navText: ["<img src='../../images/icn_left_arr_cour.svg'>", "<img src='../../images/icn_right_arr_cour.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
+
+$(".mc_dt_shTim_hdr").owlCarousel({
+  // $owl.owlCarousel({
+  dots: true,
+  loop: true,
+  autoplay: false,
+  nav: true,
+  pagination: true,
+  items: 2.5,
+  navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
+
+// onscroll
+
+$(window).scroll(function () {
+  console.log($(window).scrollTop())
+  if ($(window).scrollTop() > 63) {
+    $('.header').addClass('sticky-top');
+  }
+  if ($(window).scrollTop() < 64) {
+    $('.header').removeClass('sticky-top');
+  }
+});
+
+
