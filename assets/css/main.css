@@ -3279,10 +3279,11 @@ button {
     color: var(--primary);
 }
 
-.sign_hdr {
+.sign_wrap .sign_hdr {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    width: 100%;
+    /* width: 100%; */
+    width: 560px;
     padding: 30px;
     background-color: #ffffffb8;
 }
