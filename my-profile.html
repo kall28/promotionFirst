@@ -25,6 +25,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
   <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
   <link rel="stylesheet" media="screen" href="assets/css/tiny-slider.css" />
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 
   <!-- plugins  css -->
 
@@ -351,7 +352,10 @@
             </div>
           </div>
           <div class="link-hdr">
-            <a class="link" href=""><img class="icn" src="images/icn_del.svg" />Delete Account</a>
+            <a class="link" data-bs-toggle="modal" 
+            data-bs-target="#modDeltAct">
+            <img class="icn"
+                src="images/icn_del.svg" />Delete Account</a>
           </div>
         </div>
       </div>
@@ -359,6 +363,7 @@
     </section>
 
     <!-- Footer-->
+    <div id="modalPage"></div>
     <div id="footer"></div>
   </main>
 

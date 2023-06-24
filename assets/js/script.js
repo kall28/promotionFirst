@@ -12,7 +12,6 @@
     }, false);
   }, false);
 })();
-
 // passsword show - hide
 var clicked = 0;
 $(".toggle-password").click(function (e) {
@@ -36,7 +35,6 @@ $(".toggle-password").click(function (e) {
 });
 
 // otp pin number
-
 (function ($) {
   //Declare our function
   $.fn.validatePin = function (options) {
@@ -246,7 +244,7 @@ $(".banner_wrap_car").owlCarousel({
   nav: true,
   pagination: true,
   items: 1,
-  navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
+  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 
 });
@@ -260,7 +258,7 @@ $(".movieSlider").owlCarousel({
   nav: true,
   pagination: true,
   items: 5,
-  navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
+  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 
 });
@@ -274,7 +272,7 @@ $(".dateHdr").owlCarousel({
   pagination: true,
   items: 4,
   margin: 10,
-  navText: ["<img src='../../images/icn_arrw_left.svg'>", "<img src='../../images/icn_arrw_right.svg'>"],
+  navText: ["<img src='images/icn_arrw_left.svg'>", "<img src='images/icn_arrw_right.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 });
 
@@ -286,9 +284,8 @@ $(".cinema_slider").owlCarousel({
   nav: true,
   pagination: true,
   items: 3,
-  navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
+  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
-
 });
 // $(document).on('click', '.owl-item>div', function () {
 //   $owl.trigger('to.owl.carousel', $(this).data('position'));
@@ -302,7 +299,7 @@ $(".cinema_recom").owlCarousel({
   nav: true,
   pagination: false,
   items: 3,
-  navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
+  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 
 });
@@ -315,7 +312,7 @@ $(".offer-wrap").owlCarousel({
   // pagination: true,
   items: 2,
   margin: 10,
-  navText: ["<img src='../../images/icn_btn_leftArr.svg'>", "<img src='../../images/icn_btn_rightArr.svg'>"],
+  navText: ["<img src='images/icn_btn_leftArr.svg'>", "<img src='images/icn_btn_rightArr.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 
 });
@@ -328,7 +325,7 @@ $(".fan-banner").owlCarousel({
   nav: true,
   // pagination: true,
   items: 1,
-  navText: ["<img src='../../images/icn_btn_leftArr.svg'>", "<img src='../../images/icn_btn_rightArr.svg'>"],
+  navText: ["<img src='images/icn_btn_leftArr.svg'>", "<img src='images/icn_btn_rightArr.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 
 });
@@ -343,7 +340,7 @@ $(".movie_class").owlCarousel({
    nav: true,
   // autoplay: false,
   // pagination: false,
-  navText: ["<img src='../../images/icn_left_arr_cour.svg'>", "<img src='../../images/icn_right_arr_cour.svg'>"],
+  navText: ["<img src='images/icn_left_arr_cour.svg'>", "<img src='images/icn_right_arr_cour.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 
 });
@@ -356,9 +353,8 @@ $(".mc_dt_shTim_hdr").owlCarousel({
   nav: true,
   pagination: true,
   items: 2.5,
-  navText: ["<img src='../../images/icn_prev_arrow.svg'>", "<img src='../../images/icn_next_arrow.svg'>"],
+  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
-
 });
 
 // onscroll
@@ -372,5 +368,3 @@ $(window).scroll(function () {
     $('.header').removeClass('sticky-top');
   }
 });
-
-
