@@ -149,6 +149,9 @@ button {
     transform: rotate(180deg);
 }
 
+.minHight{
+    min-height: 500px;
+}
 /* common end*/
 .btn {
     background-color: var(--primary);
