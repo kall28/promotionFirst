@@ -5504,8 +5504,11 @@ button {
 .hr_evt_hdr {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
-
+.hr_evt_hdr a {
+    width: calc(100% /3.2);
+}
 .card-v {
     box-shadow: var(--shadow);
 }
