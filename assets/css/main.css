@@ -2883,8 +2883,9 @@ button {
 .mv_widget .tabs a {
     font-size: var(--ft16);
     font-weight: 500;
-    color: var(--secndary);
+    color: var(--black_200);
     margin-right: 20px;
+    font-weight: 700;
 }
 
 .mv_widget .tabs .active, .mv_widget .tabs a:hover {
@@ -2976,7 +2977,7 @@ button {
 
 .cin_list_wrap .cin_list_hdr {
     margin: 25px 16px;
-    width: calc(100% /3);
+    width: calc(100% /3.3);
 }
 
 
