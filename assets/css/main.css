@@ -1754,7 +1754,7 @@ button {
     width: 100%;
     text-decoration: none;
     padding: 10px 0px;
-    font-weight: 700;
+    font-weight: 100;
     color: var(--black_500);
 }
 
@@ -1764,8 +1764,13 @@ button {
     font-weight: 500;
 }
 
-.modal-hdr .list-wrap .list-hdr .link img {
+.modal-hdr .list-wrap .list .pay_hdr_img {
+    width: 120px;
     margin-right: 10px;
+}
+
+.modal-hdr .list-wrap .list-hdr .link img {
+    height: 35px;
 }
 
 .modal-hdr .list-wrap .list-hdr .list_content .head {
@@ -1854,7 +1859,7 @@ button {
 }
 
 .modal-hdr .list-wrap .list img {
-    margin: 0px 20px;
+    margin-right: 20px;
 }
 
 .modal-hdr .list-wrap .head {
@@ -2982,7 +2987,7 @@ button {
     margin-top: 10px;
 }
 
-.cin_list_wrap .cin_list_hdr .content  span img {
+.cin_list_wrap .cin_list_hdr .content span img {
     margin: 0px 10px;
     width: 8px;
 }
@@ -3363,27 +3368,31 @@ button {
     padding: 10px;
 
 }
+
 .phone_prefix {
     position: relative;
 }
-.phone_prefix span{
+
+.phone_prefix span {
     position: absolute;
     z-index: 1;
     padding: 10px;
     border-right: 1px solid var(--black_200);
-    
+
 
 }
-.phone_prefix input{
+
+.phone_prefix input {
     padding-left: 45px !important;
     width: 100%;
 
 }
 
-.pro_section .em_veri .inp_bordr .row_list .phone_prefix span{
+.pro_section .em_veri .inp_bordr .row_list .phone_prefix span {
     padding: 0px;
     padding-right: 10px;
 }
+
 .sign_hdr .form_row_chk {
     /* margin: 20px 0px; */
     display: flex;
