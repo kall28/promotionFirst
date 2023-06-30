@@ -294,10 +294,11 @@ $(".cinema_slider").owlCarousel({
 $(".cinema_recom").owlCarousel({
   // $owl.owlCarousel({
   dots: false,
-  loop: false,
+  loop: true,
   autoplay: false,
   nav: true,
   pagination: false,
+  center:true,
   items: 3,
   navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
