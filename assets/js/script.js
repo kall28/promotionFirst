@@ -358,6 +358,22 @@ $(".mc_dt_shTim_hdr").owlCarousel({
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 });
 
+
+$(".cine_banr_wrap_main_hdr").owlCarousel({
+  // $owl.owlCarousel({
+  dots: true,
+  loop: false,
+  autoplay: false,
+  nav: true,
+  pagination: true,
+  items: 1,
+  // navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
+
+
+
 // onscroll
 
 $(window).scroll(function () {
