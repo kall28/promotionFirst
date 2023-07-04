@@ -6424,4 +6424,8 @@ button {
         width: 90%;
         display: block;
     }
+
+    .tnc_wrap {
+        padding: 0 20px;
+    }
 }
