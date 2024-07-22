@@ -298,7 +298,7 @@ $(".cinema_recom").owlCarousel({
   autoplay: false,
   nav: true,
   pagination: false,
-  center:true,
+  center: true,
   items: 3,
   navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
@@ -334,11 +334,11 @@ $(".fan-banner").owlCarousel({
 
 $(".movie_class").owlCarousel({
   center: true,
-  items:2,
-  loop:true,
-  autoWidth:true,
-  margin:100,
-   nav: true,
+  items: 2,
+  loop: true,
+  autoWidth: true,
+  margin: 100,
+  nav: true,
   // autoplay: false,
   // pagination: false,
   navText: ["<img src='images/icn_left_arr_cour.svg'>", "<img src='images/icn_right_arr_cour.svg'>"],
@@ -372,6 +372,44 @@ $(".cine_banr_wrap_main_hdr").owlCarousel({
 
 });
 
+$(".fnb_promo").owlCarousel({
+  // $owl.owlCarousel({
+  dots: true,
+  loop: false,
+  autoplay: false,
+  nav: true,
+  pagination: false,
+  items: 4,
+  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
+
+$(".snack_hdr").owlCarousel({
+  // $owl.owlCarousel({
+  dots: true,
+  loop: false,
+  autoplay: false,
+  nav: true,
+  pagination: false,
+  items: 3,
+  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
+$(".bewrages_hdr").owlCarousel({
+  // $owl.owlCarousel({
+  dots: true,
+  loop: false,
+  autoplay: false,
+  nav: true,
+  pagination: false,
+  items: 3,
+  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
+
 
 
 // onscroll
@@ -385,3 +423,6 @@ $(window).scroll(function () {
     $('.header').removeClass('sticky-top');
   }
 });
+
+
+
