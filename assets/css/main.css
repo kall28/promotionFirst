@@ -7292,6 +7292,7 @@ iframe#launcher {
     justify-content: flex-end;
     background-color: var(--white);
     padding-top: 10px;
+  
 }
 
 .price_widget .input-group {
@@ -7314,6 +7315,10 @@ iframe#launcher {
     z-index: 2;
     align-items: center;
     justify-content: space-between;
+    border-radius: 10px 10px 0px 0px;
+    width: 90%;
+   left: 5%;
+   right: 5%;
 }
 
 .fnb_food_price_handler .prd_hndlr {
@@ -7430,6 +7435,22 @@ iframe#launcher {
     gap:10px;
 }
 
+.fb_policy h3, .fb_policy h4{
+    font-size: var(--ft18);
+
+}
+.fb_policy h2{
+    font-size: var(--ft18);
+}
+.add_spinner .input-group{
+    width: 120px;
+    flex-wrap: nowrap;
+}
+.add_spinner .input-group input {
+    width: 180px;
+    padding: 0px;
+    text-align: right;
+}
 /* fnb end */
 
 
