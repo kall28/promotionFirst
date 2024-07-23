@@ -7012,10 +7012,9 @@ iframe#launcher {
     -moz-appearance: window;
     padding: 2px 50px 2px 2px;
     border: none;
-    background-image: url("https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+    background-image:url('../../images/icn_arrw_bottom.svg');
     background-repeat: no-repeat;
     background-position: right center;
-    background-image: image(invert);
 }
 
 .fnb_select .selet_hdr select {
@@ -7292,7 +7291,7 @@ iframe#launcher {
     justify-content: flex-end;
     background-color: var(--white);
     padding-top: 10px;
-  
+
 }
 
 .price_widget .input-group {
@@ -7317,8 +7316,8 @@ iframe#launcher {
     justify-content: space-between;
     border-radius: 10px 10px 0px 0px;
     width: 90%;
-   left: 5%;
-   right: 5%;
+    left: 5%;
+    right: 5%;
 }
 
 .fnb_food_price_handler .prd_hndlr {
@@ -7368,6 +7367,7 @@ iframe#launcher {
     display: block;
     border: 1px solid var(--black_200);
     border-radius: var(--radius);
+    overflow: hidden;
 }
 
 .prd_cart .prd_cart_hdr {
@@ -7411,6 +7411,9 @@ iframe#launcher {
     gap: 20px;
     flex: 0.8;
 }
+.conf-wrap_fnb.pg-wrap .prd_cart .title{
+    padding-top: 0px;
+}
 
 .fnb_ord_cart .prd_cart {
     width: calc(100% / 3.1);
@@ -7419,37 +7422,62 @@ iframe#launcher {
     border-radius: var(--radius);
     padding: 10px;
 }
-.fnb_ord_cart .prd_cart .content{
+
+.fnb_ord_cart .prd_cart .content {
     gap: 0px;
 }
+
 .fnb_ord_cart .prd_cart * {
     font-size: var(--ft14);
 }
-.fnb_ord_cart .prd_cart * .title{
+
+.fnb_ord_cart .prd_cart * .title {
     font-size: var(--ft12);
 }
-.fnb_ord_cart_wrap .fnb_ord_cart{
+
+.fnb_ord_cart_wrap .fnb_ord_cart {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap:10px;
+    gap: 10px;
 }
 
-.fb_policy h3, .fb_policy h4{
+.fb_policy h3,
+.fb_policy h4 {
     font-size: var(--ft18);
 
 }
-.fb_policy h2{
+
+.fb_policy h2 {
     font-size: var(--ft18);
 }
-.add_spinner .input-group{
+.fb_policy_wrap .nav-tabs li{
+    list-style: none;
+}
+
+.add_spinner .input-group {
     width: 120px;
     flex-wrap: nowrap;
 }
+
 .add_spinner .input-group input {
     width: 180px;
     padding: 0px;
     text-align: right;
+}
+
+.fnb_imgCont {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.fnb_mb_wrap .link_wrap {
+    text-align: right;
+
+}
+.bk_ord_hdr .col_content .row_list .title{
+    padding-top: 5px;
 }
 /* fnb end */
 
