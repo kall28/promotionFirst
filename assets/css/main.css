@@ -2415,6 +2415,15 @@ button {
 .conf-wrap .img-emoji {
     margin-top: 40px;
     margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.conf-wrap .img-emoji img {
+    width: 90%;
 }
 
 .conf-wrap .head {
@@ -2664,6 +2673,7 @@ button {
 .bk_ord_prc_hdr {
     display: flex;
     justify-content: space-between;
+    padding: 10px 0px;
 }
 
 .bk_ord_prc_hdr .title {
@@ -2681,7 +2691,7 @@ button {
     flex-direction: column;
     text-align: center;
     text-decoration: none;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 .conf-wrap .link_wrap a {
@@ -7012,7 +7022,7 @@ iframe#launcher {
     -moz-appearance: window;
     padding: 2px 50px 2px 2px;
     border: none;
-    background-image:url('../../images/icn_arrw_bottom.svg');
+    background-image: url('../../images/icn_arrw_bottom.svg');
     background-repeat: no-repeat;
     background-position: right center;
 }
@@ -7068,9 +7078,10 @@ iframe#launcher {
 
 .fnb_wrap .product_hdr .prd_img {
     border-radius: var(--radius);
-    background-color: var(--black_100);
+    border: 1px solid var(--black_100);
     width: 135px;
     height: 135px;
+    overflow: hidden;
 }
 
 .prd_section {
@@ -7122,6 +7133,7 @@ iframe#launcher {
     padding: 30px 0px;
 }
 
+
 .fnb_promo_hdr {
     background-color: var(--primary);
 }
@@ -7136,6 +7148,20 @@ iframe#launcher {
     padding: 0px;
     gap: 10px;
 
+}
+
+.fnb_kombo .product_hdr a {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.fnb_kombo .product_hdr a .add-button {
+    pointer-events: none;
+}
+
+.fnb_kombo .product_hdr a .content {
+    gap: 5px;
 }
 
 .fnb_promo_hdr .product_hdr .content {
@@ -7193,7 +7219,8 @@ iframe#launcher {
 
 .fnb_promo .owl-nav,
 .snack_hdr .owl-nav,
-.bewrages_hdr .owl-nav {
+.bewrages_hdr .owl-nav,
+.fnb_kombo .owl-nav {
     position: absolute;
     top: -85px;
     right: 0px;
@@ -7226,12 +7253,32 @@ iframe#launcher {
 .mod_head .img_hdr {
     width: 130px;
     height: 130px;
-    background-color: var(--black_100);
+    overflow: hidden;
+    border-radius: var(--radius);
+    border: 1px solid var(--black_100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.fnb_cust.modal-hdr .modal-header {
+.mod_head .img_hdr img {
+    object-fit: contain;
+}
+
+.modal-hdr.fnb_cust .modal-header .mod_head {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 70%;
+}
+
+.fnb_cust .modal-header {
     align-items: flex-start;
     display: flex;
+}
+
+.fnb_cust.modal-hdr .title {
+    font-weight: normal;
 }
 
 .cust_cont_row .list_hdr {
@@ -7284,6 +7331,17 @@ iframe#launcher {
     overflow-y: auto;
 }
 
+.cust_cont_row .row_01 .textArea {
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--radius);
+    border: 1px solid var(--black_100);
+}
+
+.cust_cont_row .row_01 .accordion-button {
+    padding-bottom: 5px;
+}
+
 .price_widget {
     display: flex;
     gap: 10px;
@@ -7294,12 +7352,21 @@ iframe#launcher {
 
 }
 
+
 .price_widget .input-group {
-    width: 130px;
+    width: 120px;
+}
+
+.price_widget .input-group .btn {
+    position: relative;
+    z-index: 2;
+    width: 35px;
 }
 
 .price_widget .input-group input {
-    text-align: right;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 0px;
 }
 
 .fnb_food_price_handler {
@@ -7329,10 +7396,19 @@ iframe#launcher {
 .fnb_food_price_handler .prd_hndlr .img_hdr {
     width: 80px;
     height: 80px;
-    background-color: var(--black_100);
+    border: 1px solid var(--black_100);
     border-radius: var(--radius);
     position: relative;
     display: inline-block;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fnb_food_price_handler .prd_hndlr .img_hdr img {
+    object-fit: contain;
+    width: 90%;
 }
 
 .fnb_food_price_handler .prd_hndlr .img_hdr .edit_hdr {
@@ -7368,6 +7444,13 @@ iframe#launcher {
     border: 1px solid var(--black_200);
     border-radius: var(--radius);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prd_cart .img_hdr img {
+    object-fit: contain;
 }
 
 .prd_cart .prd_cart_hdr {
@@ -7375,12 +7458,18 @@ iframe#launcher {
     gap: 20px;
     flex-direction: row;
     align-items: center;
+    width: 60%;
 }
 
 .prd_cart .content {
     flex-direction: column;
-    gap: 5px;
+    /* gap: 5px; */
     display: flex;
+}
+.prd_cart .prd_cart_hdr .content p,
+.prd_cart .content p {
+    margin: 0px;
+    font-size: var(--ft14);
 }
 
 .prd_cart .content.ai_right {
@@ -7391,6 +7480,10 @@ iframe#launcher {
     color: var(--secndary);
 }
 
+.prd_cart_wrap .bd_hdr .od_hdr .list div:last-child {
+    text-align: right;
+}
+
 .prd_cart_location {
     background-color: var(--black_100);
     padding: 10px;
@@ -7399,7 +7492,19 @@ iframe#launcher {
     justify-content: space-between;
     align-items: center;
 }
+.prd_cart hr{
+    height: 150px;
+    width: 1px;
+}
+.prd_cart .row_list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.prd_cart .row_list .icn{
+    margin-right: 15px;
 
+}
 .conf-wrap_fnb.conf-wrap .qr_ord_hdr {
     width: 90%;
 }
@@ -7411,8 +7516,51 @@ iframe#launcher {
     gap: 20px;
     flex: 0.8;
 }
-.conf-wrap_fnb.pg-wrap .prd_cart .title{
+
+
+.conf-wrap_fnb.pg-wrap .prd_cart .title {
     padding-top: 0px;
+    font-size: var(--ft14);
+}
+
+.conf-wrap_fnb .qr_ord_hdr a {
+    padding: 0px;
+}
+
+.bk_ord_hdr .col_content .img_cont_hdr {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.conf-wrap_fnb .bk_ord_hdr {
+    justify-content: space-between;
+}
+
+.conf-wrap_fnb .bk_ord_hdr .col_content .row_list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* width: 40%; */
+    text-align: right;
+    padding-left: 20px;
+    gap: 5px;
+}
+
+.conf-wrap_fnb .bk_ord_hdr .col_content .row_list .title {
+    padding: 0px;
+    margin: 0px;
+}
+
+.conf-wrap_fnb .qr_ord_hdr .row-center .content .btn_brd_second {
+    width: fit-content;
+    padding: 5px 20px;
+}
+
+.conf-wrap_fnb .qr_ord_hdr .row-center .content .head {
+    margin-bottom: 10px;
 }
 
 .fnb_ord_cart .prd_cart {
@@ -7451,7 +7599,8 @@ iframe#launcher {
 .fb_policy h2 {
     font-size: var(--ft18);
 }
-.fb_policy_wrap .nav-tabs li{
+
+.fb_policy_wrap .nav-tabs li {
     list-style: none;
 }
 
@@ -7471,14 +7620,91 @@ iframe#launcher {
     align-items: center;
     gap: 25px;
 }
+.fnb_imgCont .img_hdr{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--black_200);
+    border-radius: var(--radius);
+}
+.fnb_imgCont .img_hdr img{
+    object-fit: contain;
+    width: 90%;
+}
+.fnb_imgCont .content p.title{
+    font-size: var(--ft16) !important;
+    margin: 0px;
 
+}
+.fnb_imgCont .content .icn.invert{
+    opacity: .5;
+    width: 20px;
+}
 .fnb_mb_wrap .link_wrap {
     text-align: right;
 
 }
-.bk_ord_hdr .col_content .row_list .title{
-    padding-top: 5px;
+
+.qr_wrap_hdr .qr_hdr {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0px;
 }
+
+.qr_wrap_hdr .qr_hdr .content {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.qr_wrap_hdr .qr_hdr .content .btn {
+    width: fit-content;
+    padding: 5px 20px 7px 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.qr_wrap_hdr .qr_hdr .img_hdr {
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 0px 5px var(--black_100);
+    padding: 10px;
+    border-radius: var(--radius);
+}
+
+.ord_rec .list_hdr .list .title .prmo_title {
+    color: var(--secndary);
+}
+
+.badge {
+    background: rgb(75, 132, 251);
+    border-radius: var(--radius);
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+.movie {
+    background: rgb(75, 132, 251);
+    background: linear-gradient(45deg, rgba(75, 132, 251, 1) 49%, rgba(63, 203, 203, 1) 100%);
+}
+
+.event {
+    background: rgb(75, 132, 251);
+    background: linear-gradient(45deg, rgba(244, 80, 83, 1) 49%, rgba(253, 189, 46, 1) 100%);
+
+}
+.fnb {
+    background: rgb(75, 132, 251);
+    background: linear-gradient(45deg, rgba(129,60,204,1) 49%, rgba(75,132,251,1) 100%);
+
+}
+
 /* fnb end */
 
 

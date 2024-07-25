@@ -384,6 +384,18 @@ $(".fnb_promo").owlCarousel({
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 
 });
+$(".fnb_kombo").owlCarousel({
+  // $owl.owlCarousel({
+  dots: true,
+  loop: false,
+  autoplay: false,
+  nav: true,
+  pagination: false,
+  items: 4,
+  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
 
 $(".snack_hdr").owlCarousel({
   // $owl.owlCarousel({
