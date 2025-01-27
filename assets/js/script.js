@@ -248,6 +248,35 @@ $(".banner_wrap_car").owlCarousel({
   // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
 
 });
+$(".news_ban_wrap").owlCarousel({
+  // $owl.owlCarousel({
+  dots: true,
+  loop: false,
+  autoplay: false,
+  nav: false,
+  margin: auto,
+  pagination: true,
+  items: 1,
+  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
+
+
+
+
+$(".myTickt_hdr_wrap").owlCarousel({
+  // $owl.owlCarousel({
+  dots: true,
+  loop: false,
+  autoplay: false,
+  nav: false,
+  pagination: true,
+  items: 1,
+  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
 
 
 $(".movieSlider").owlCarousel({
@@ -318,6 +347,20 @@ $(".offer-wrap").owlCarousel({
 
 });
 
+$(".log_banr_wrap").owlCarousel({
+  // $owl.owlCarousel({
+  dots: true,
+  loop: true,
+  autoplay: true,
+  nav: false,
+  // pagination: true,
+  items: 1,
+  margin: 10,
+  navText: ["<img src='images/icn_btn_leftArr.svg'>", "<img src='images/icn_btn_rightArr.svg'>"],
+  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
+
+});
+
 $(".fan-banner").owlCarousel({
   // $owl.owlCarousel({
   dots: false,
@@ -372,69 +415,19 @@ $(".cine_banr_wrap_main_hdr").owlCarousel({
 
 });
 
-$(".fnb_promo").owlCarousel({
-  // $owl.owlCarousel({
-  dots: true,
-  loop: false,
-  autoplay: false,
-  nav: true,
-  pagination: false,
-  items: 4,
-  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
-  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
-
-});
-$(".fnb_kombo").owlCarousel({
-  // $owl.owlCarousel({
-  dots: true,
-  loop: false,
-  autoplay: false,
-  nav: true,
-  pagination: false,
-  items: 4,
-  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
-  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
-
-});
-
-$(".snack_hdr").owlCarousel({
-  // $owl.owlCarousel({
-  dots: true,
-  loop: false,
-  autoplay: false,
-  nav: true,
-  pagination: false,
-  items: 3,
-  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
-  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
-
-});
-$(".bewrages_hdr").owlCarousel({
-  // $owl.owlCarousel({
-  dots: true,
-  loop: false,
-  autoplay: false,
-  nav: true,
-  pagination: false,
-  items: 3,
-  navText: ["<img src='images/icn_prev_arrow.svg'>", "<img src='images/icn_next_arrow.svg'>"],
-  // navigationText: ["<img src='../images/icn_arr.svg", "<img src='mynextimage.png'>"]
-
-});
-
 
 
 // onscroll
 
-$(window).scroll(function () {
-  console.log($(window).scrollTop())
-  if ($(window).scrollTop() > 63) {
-    $('.header').addClass('sticky-top');
-  }
-  if ($(window).scrollTop() < 64) {
-    $('.header').removeClass('sticky-top');
-  }
-});
+// $(window).scroll(function () {
+//   console.log($(window).scrollTop())
+//   if ($(window).scrollTop() > 63) {
+//     $('.header').addClass('sticky-top');
+//   }
+//   if ($(window).scrollTop() < 64) {
+//     $('.header').removeClass('sticky-top');
+//   }
+// });
 
 
-
+// search

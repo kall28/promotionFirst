@@ -1,58 +1,40 @@
-<header class="header headerBg " style=" background-image: url(images/bg_hdr.jpg);
-background-repeat: no-repeat;
-background-size: 100% 100%;">
-  <div class="logo">
-    <a href="index.html"> <img src="images/cinepolis-logo.png" /> </a>
-  </div>
-  <div class="nav_btn_top">
-    <a href="" class="nav_btn">
-      <img src="images/icn_language.svg" />
-      English
-    </a>
-    <div class="nav_btn_top_hdr">
-      <a data-bs-toggle="modal" data-bs-target="#location" type="button" class="link">
-        <img src="images/icn_location.svg" />
-        Jakarta
-      </a>
-      <span>|</span>
-      <a href="watchlist.html" class="link">
-        <img src="images/icn_heart_brd.svg" />
-        <!-- <img src="images/icn_heart.svg" /> -->
-      </a>
-      <span>|</span>
-      <a href="my-bookinngs.html" class="link">
-        <img src="images/icn_bking.svg" />
-        My Bookings
-      </a>
+<header>
+  <div class="header headerBg "
+    style=" background-image: url(images/bg_hdr.jpg);background-repeat: no-repeat; background-size: 100% 100%;">
+    <div class="logo">
+      <a href="index.html"> <img src="images/cinepolis-logo.png" /> </a>
     </div>
-  </div>
+    <div class="nav_btn_top">
+      <!-- <a href="" class="nav_btn">
+        <img src="images/icn_language.svg" />
+        English
+      </a> -->
+       <div class="search-container mt-3">
+      <input type="text" class="form-control search-input" placeholder="Search here...">
+      <button class="btn btn-secondary search-button">
+        <i class="bi bi-search"></i> Find
+      </button>
+    </div>
+      <div class="nav_btn_top_hdr">
+        <a data-bs-toggle="modal" data-bs-target="#location" type="button" class="link">
+          <img src="images/icn_location.svg" />
+          Jakarta
+        </a>
+        <span>|</span>
+        <a href="watchlist.html" class="link">
+          <img src="images/icn_heart_brd.svg" />
+          <!-- <img src="images/icn_heart.svg" /> -->
+        </a>
+        <span>|</span>
+        <a href="my-bookinngs.html" class="link">
+          <img src="images/icn_bking.svg" />
+          My Bookings
+        </a>
+      </div>
+    </div>
 
-  <nav class="navbar navbar-expand-lg navbar_wrap">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#head-nav"
-      aria-controls="head-nav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
     <div class="collapse navbar-collapse nav-head" id="head-nav">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"> <a href="movies.html">Movies</a>
-        </li>
-        <li class="nav-item"><a href="fnb_page.html">F&B</a></li>
-        <li class="nav-item dropdown nav_drop">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            News & Promotions
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="news.html">News</a>
-            <a class="dropdown-item" href="promotion.html">Promotion</a>
-          </div>
-        </li>
-        <li class="nav-item"><a href="cinema-page.html">Cinema</a></li>
-        <li class="nav-item"><a href="phase_two.html">Events</a></li>
-        <li class="nav-item"><a href="phase_two.html">Cinema Rental</a></li>
-      </ul>
-
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <div class="head_search_wrap">
@@ -125,5 +107,63 @@ background-size: 100% 100%;">
       </ul>
 
     </div>
+
+  </div>
+  <div class="nav__wrap">
+  <nav class=" navbar navbar-expand-lg navbar_wrap">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#head-nav"
+      aria-controls="head-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active"> <a href="movies.html">Movies</a>
+      </li>
+      <li class="nav-item"><a href="phase_two.html">F&B</a></li>
+      <li> <a class="nav-item" href="news.html">News</a></li>
+      <li>
+        <a class="nav-item" href="promotion.html">Promotion</a>
+      </li>
+      <!-- <li class="nav-item dropdown nav_drop">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          News & Promotions
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="news.html">News</a>
+          <a class="dropdown-item" href="promotion.html">Promotion</a>
+        </div>
+      </li> -->
+      <li class="nav-item"><a href="cinema-page.html">Cinema</a></li>
+      <li class="nav-item"><a href="phase_two.html">Events</a></li>
+      <li class="nav-item"><a href="phase_two.html">Cinema Rental</a></li>
+    </ul>
   </nav>
+  <aside>
+    <a href="">
+      <span><img src="images/icn_down.svg"/></span>
+      Unduh Aplikasi</a>
+  </aside>
+</div>
+  </div>
 </header>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const searchButtons = document.querySelectorAll(".search-button");
+  const searchInputs = document.querySelectorAll(".search-input");
+
+  searchButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      const input = searchInputs[index]; // Match input with button by index
+      const isActive = input.classList.toggle("active");
+      if (isActive) {
+        input.focus();
+      } else {
+        input.blur();
+      }
+    });
+  });
+});
+</script>

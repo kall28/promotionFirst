@@ -26,7 +26,7 @@
     $(window).on('load', function () {
         setTimeout(function () {
             $('.loader-wrapper').fadeOut('slow');
-        }, 100);
+        }, 1000);
         $('.loader-wrapper').remove('slow');
     });
 
