@@ -3711,7 +3711,7 @@ header {
 
 .sign_hdr .form-group .field-icon {
 	position: absolute;
-	top: 10px;
+	bottom: 5px;
 	right: 10px;
 	color: var(--black_200);
 	z-index: 3;
@@ -4172,6 +4172,9 @@ header {
 /* verification end */
 
 /* promotion */
+.promo_wrap {
+    margin-top: 60px;
+}
 .promo_wrap .promo_thumb_hdr {
 	flex-wrap: wrap;
 	justify-content: flex-start;
@@ -4275,6 +4278,10 @@ header {
 
 .promo_desc .promo_valid .title {
 	margin: 10px 0px;
+    gap: 10px;
+    display: flex;
+    align-items: flex-start;
+
 }
 
 .promo_desc .promo_valid img {
@@ -8565,8 +8572,12 @@ iframe#launcher {
 
 	.page_hdr {
 		padding: 0 40px;
+        margin-top: 45px;
 	}
+.promo__wrap .banner_hdr.page_hdr{
+	margin-top: 0px;
 
+}
 	.fan_banner .cont_wrap {
 		width: 72%;
 	}
