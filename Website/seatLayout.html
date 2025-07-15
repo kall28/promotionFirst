@@ -34,9 +34,9 @@
 
 <body>
   <!-- pre-loader start -->
-  <div class="loader-wrapper img-gif">
+  <!-- <div class="loader-wrapper img-gif">
     <img src="images/loader.gif" alt="">
-  </div>
+  </div> -->
   <!-- pre-loader end -->
 
   <main class="page-wrapper">
@@ -69,6 +69,18 @@
     </section>
     <section>
       <div class="seat_layout_wrap">
+        <div id="divSeatLayoutAlert" class="seatLay_message">
+          <div class="content">
+            <icon><img src="images/icn_warning.svg"></icon>
+            <div class="title">
+              <p>A Playtime ticket is required for children under 12
+                All guests must bring and wear socks in the Junior area, both inside and outside the cinema
+                Bought Tickets are not eligible for change or refund</p>
+            </div>
+            <a onclick="SeatLayoutHelper.closeAlert();"><img src="images/icn_close.svg"></a>
+          </div>
+        </div>
+
         <div class="head">
           Screen
         </div>

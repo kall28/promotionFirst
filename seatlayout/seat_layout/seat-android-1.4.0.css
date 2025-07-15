@@ -1,21 +1,21 @@
-/*body {*/
-	
+body {
+	font-family: 'Lora', serif;
 	/* background-image: url(../images/bg.jpg); 
      background-repeat: repeat-x; */
 	/* background-color:red !important; */
-	/*background-color: transparent !important;
+	background-color: transparent !important;
 	text-align: center;
-
+	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
-	display: flex;*/
+	display: flex;
 	/* zoom: .45; */
-	/*justify-content: center;
+	justify-content: center;
 	padding-left: 30px
-}*/
+}
 
-/*#form1 {
+#form1 {
 	margin: 0 auto;
-}*/
+}
 
 .home.bg {
 	width: 100%;
@@ -40,8 +40,15 @@
 		filter: blur(1.5px); */
 }
 
+.seatLayoutPage::-webkit-scrollbar {
+	display: none;
+}
+
 .seatLayoutPage {
-	width: 100%;
+	width: 100vw;
+	height: 70vh;
+	overflow: scroll;
+	/* width: 100%; */
 }
 
 .screen {
@@ -81,7 +88,8 @@
 .seatTable {
 	margin: 0 auto;
 	display: inline-block;
-	padding: 10px;
+	/* padding: 10px; */
+	padding: 0px 20px;
 
 	/* added */
 	zoom: 1;
@@ -101,6 +109,7 @@
 	justify-content: center;
 	width: calc(100% * 1.3);
 	align-items: center; */
+	/* padding-left: 100px; */
 }
 
 .table th {
@@ -142,6 +151,58 @@
 	display: none;
 }
 
+/* .blank.selected.custIcn .cust_icn{
+filter: brightness(0) saturate(100%) invert(73%) sepia(22%) saturate(550%) hue-rotate(86deg) brightness(92%) contrast(88%);
+} */
+.blank.selected.custIcn {
+	/* filter: none; */
+	/* filter: brightness(0) saturate(100%) invert(69%) sepia(20%) saturate(610%) hue-rotate(84deg) brightness(94%) contrast(90%); */
+	filter: invert(80%) sepia(35%) saturate(510%) hue-rotate(86deg) brightness(100%) contrast(75%);
+	/* filter: brightness(0) saturate(100%) invert(73%) sepia(22%) saturate(550%) hue-rotate(86deg) brightness(92%) contrast(88%); */
+
+
+}
+
+.blank.selected.custIcn .seatNum {
+	color: #fff;
+}
+
+.blank.taken.custIcn {
+	filter: saturate(2);
+}
+
+.blank.custIcn {
+
+	/* svg icon */
+	filter: brightness(0) saturate(100%) invert(50%) sepia(72%) saturate(572%) hue-rotate(337deg) brightness(92%) contrast(95%);
+	/* image */
+	/* filter:saturate(100%) invert(85%) sepia(73%) saturate(343%) hue-rotate(339deg) brightness(95%) contrast(90%); */
+
+}
+
+.blank.custIcn .def_icn {
+	display: block;
+}
+
+.blank.custIcn .cust_icn {
+	display: none;
+
+}
+
+.blank.selected.custIcn .cust_icn {
+	display: block;
+}
+
+.blank.taken.custIcn .cust_icn {
+	display: block;
+	/* filter: contrast(0.8) brightness(1.5); */
+}
+
+.blank.taken.custIcn .def_icn,
+.blank.selected.custIcn .def_icn {
+	display: none;
+}
+
 .seatNum {
 	position: absolute;
 	font-size: 0.4em;
@@ -151,7 +212,19 @@
 	bottom: 0;
 	right: 0;
 	color: #ffff;
+	z-index: 2;
 }
+
+/*.seatNum {
+	position: absolute;
+	font-size: 0.3em;
+	left: 0;
+	text-align: center;
+	top: 13%;
+	bottom: 0;
+	right: 0;
+	color: #ffff;
+}*/
 
 .emptyRow, .blank {
 	/* width: 1.3em;
@@ -174,10 +247,8 @@
 	align-items: center;
 	justify-content: center;
 	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-	position: relative;
-	cursor: pointer;
 	width: 25px;
-    height: 25px;
+	height: 25px;
 }
 
 /*.blank:hover, .blank.selected {
@@ -193,6 +264,8 @@
 	color: #dfff;
 	border: 1px solid #ffff; */
 	filter: sepia(1) saturate(30) hue-rotate(580.5deg) brightness(1.9);
+	/* filter: sepia(1) saturate(70) hue-rotate(580.5deg) brightness(1.9); */
+
 }
 
 .blank.couple {
@@ -200,13 +273,20 @@
 }
 
 .blank.taken {
-	/* background-color: #dad5d5 */
+	/* background-color: #dad5d5; */
 	filter: grayscale(1) brightness(2.7);
+	width: 24px;
 }
 
 .blank.broken {
-	background-color: #000000ab;
+	/* background-color: #000000ab; */
 	position: relative;
+	filter: grayscale(1);
+	pointer-events: none;
+}
+
+.blank.broken .seatNum {
+	display: none;
 }
 
 .seatAvai {
@@ -219,6 +299,17 @@
 	margin-right: 5px;
 }
 
+.seatNotAvai {
+	width: 6px;
+	height: 6px;
+	background-color: #3c3c3c;
+	border-radius: 100px;
+	/* border: 1px solid #ccc; */
+	display: inline-block;
+	margin-right: 5px;
+}
+
+
 .table {
 	margin: 0 auto;
 	white-space: nowrap;
@@ -229,6 +320,7 @@
 	background-color: #00b4cc;
 
 }
+
 .seatAvai.taken {
 	background-color: #a0a0a0;
 }
@@ -270,6 +362,17 @@
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#30cccf', endColorstr='#2c8df5', GradientType=0);
 	/* IE6-9 */
+}
+
+.msgHdr {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-size: 18px;
+	padding: 5%;
+	text-align: center;
+	color: #000;
 }
 
 @media only screen and (max-width:425px) {

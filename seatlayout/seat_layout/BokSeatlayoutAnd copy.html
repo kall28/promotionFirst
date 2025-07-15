@@ -9,9 +9,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <link rel="stylesheet" href="../css/android-1.38.css"> -->
-    <link rel="stylesheet" href="seat-android-1.4.0.css">
+    <link rel="stylesheet" href="android-1.47.css">
     <title>Seat Layout</title>
-    
+
     <script src="../js/jquery-3.3.1.slim.min.js"></script>
     <script language="javascript" type="text/javascript">
         //--------------------------------------------------------
@@ -24,6 +24,7 @@
     </script>
 
 </head>
+
 <body>
     <form id="form1" runat="server">
         <!-- Msg Hsdr -->
@@ -85,73 +86,88 @@
                                                     <th colspan="100">STANDARD</th>
                                                 </tr>
                                                 <tr>
-                                                    <td class="blank" onclick="javascript:ToggleSeats('N221');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N12</span>
-                                                        <img src="img/dBoxseat.svg" />
+                                                    <td class="blank selected custIcn"
+                                                        onclick="javascript:ToggleSeats('N221');"><input type="checkbox"
+                                                            name="chk" id="chk_N22" style="display:none;"><input
+                                                            type="hidden" name="hdn" id="hdn_N22"
+                                                            value="N-22$0000000000|1|12|23">
+                                                        <span class="seatNum">N01</span>
+                                                        <img class="cust_icn" src="img/Toothless.svg" />
+                                                        <img class="def_icn" src="img/seat.svg" />
                                                     </td>
-                                                    <td class="blank " onclick="javascript:ToggleSeats('N21');">
+                                                    <td class="blank custIcn" onclick="javascript:ToggleSeats('N21');">
                                                         <input type="checkbox" name="chk" id="chk_N21"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N21" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/dBoxseat.svg" />
+                                                        <span class="seatNum">N02</span>
+                                                        <img class="cust_icn" src="img/Toothless.svg" />
+                                                        <img class="def_icn" src="img/seat.svg" />
                                                     </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
+                                                    <td class="blank taken custIcn"
+                                                        onclick="javascript:ToggleSeats('N20');">
                                                         <input type="checkbox" name="chk" id="chk_N20"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/dBoxseat.svg" />
+                                                        <span class="seatNum">N03</span>
+                                                        <img class="cust_icn" src="img/Toothless.svg" />
+                                                        <img class="def_icn" src="img/seat.svg" />
                                                     </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
+                                                    <td class="blank taken custIcn"
+                                                        onclick="javascript:ToggleSeats('N20');">
                                                         <input type="checkbox" name="chk" id="chk_N20"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/dBoxseat.svg" />
+                                                        <span class="seatNum">N04</span>
+                                                        <img class="cust_icn" src="img/Toothless.svg" />
+                                                        <img class="def_icn" src="img/seat.svg" />
                                                     </td>
                                                     <td class="blank empty">
                                                         <img src="img/seat.svg" />
                                                     </td>
-                                                    <td class="blank selected" onclick="javascript:ToggleSeats('N22');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N22</span>
-                                                        <img src="img/dBoxseat.svg" />
+                                                    <td class="blank selected custIcn"
+                                                        onclick="javascript:ToggleSeats('N221');"><input type="checkbox"
+                                                            name="chk" id="chk_N22" style="display:none;"><input
+                                                            type="hidden" name="hdn" id="hdn_N22"
+                                                            value="N-22$0000000000|1|12|23">
+                                                        <span class="seatNum">N05</span>
+                                                        <img class="cust_icn" src="img/Toothless.svg" />
+                                                        <img class="def_icn" src="img/seat.svg" />
                                                     </td>
-                                                    <td class="blank selected" onclick="javascript:ToggleSeats('N21');">
+                                                    <td class="blank custIcn" onclick="javascript:ToggleSeats('N21');">
                                                         <input type="checkbox" name="chk" id="chk_N21"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N21" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/dBoxseat.svg" />
+                                                        <span class="seatNum">N06</span>
+                                                        <img class="cust_icn" src="img/Toothless.svg" />
+                                                        <img class="def_icn" src="img/seat.svg" />
                                                     </td>
-                                                    <td class="blank " onclick="javascript:ToggleSeats('N20');">
+                                                    <td class="blank taken custIcn"
+                                                        onclick="javascript:ToggleSeats('N20');">
                                                         <input type="checkbox" name="chk" id="chk_N20"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/dBoxseat.svg" />
+                                                        <span class="seatNum">N07</span>
+                                                        <img class="cust_icn" src="img/Toothless.svg" />
+                                                        <img class="def_icn" src="img/seat.svg" />
                                                     </td>
-                                                    <td class="blank " onclick="javascript:ToggleSeats('N20');">
+                                                    <td class="blank taken custIcn"
+                                                        onclick="javascript:ToggleSeats('N20');">
                                                         <input type="checkbox" name="chk" id="chk_N20"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/dBoxseat.svg" />
+                                                        <span class="seatNum">N08</span>
+                                                        <img class="cust_icn" src="img/Toothless.svg" />
+                                                        <img class="def_icn" src="img/seat.svg" />
                                                     </td>
 
                                                 </tr>
 
                                                 <tr>
-                                                    <td class="blank" onclick="javascript:ToggleSeats('N221');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
+                                                    <td class="blank selected green"
+                                                        onclick="javascript:ToggleSeats('N221');"><input type="checkbox"
+                                                            name="chk" id="chk_N22" style="display:none;"><input
+                                                            type="hidden" name="hdn" id="hdn_N22"
+                                                            value="N-22$0000000000|1|12|23">
                                                         <span class="seatNum">N12</span>
                                                         <img src="img/dBoxseat.svg" />
                                                     </td>
@@ -162,12 +178,13 @@
                                                         <span class="seatNum">N21</span>
                                                         <img src="img/dBoxseat.svg" />
                                                     </td>
-                                                    <td class="blank " onclick="javascript:ToggleSeats('N20');">
+                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
                                                         <input type="checkbox" name="chk" id="chk_N20"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N20" value="N-22$0000000000|1|12|23">
                                                         <span class="seatNum">N21</span>
-                                                        <img src="img/dBoxseat.svg" />
+                                                        <!-- <img src="img/dBoxseat.svg" /> -->
+                                                          <img class="cust_icn" src="img/Toothless.svg" />
                                                     </td>
                                                     <td class="blank " onclick="javascript:ToggleSeats('N20');">
                                                         <input type="checkbox" name="chk" id="chk_N20"
@@ -211,324 +228,149 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td class="blank" onclick="javascript:ToggleSeats('N22');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N22</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank selected" onclick="javascript:ToggleSeats('N21');">
+                                                    <td class="blank selected green"
+                                                        onclick="javascript:ToggleSeats('N21');">
                                                         <input type="checkbox" name="chk" id="chk_N21"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N21" value="N-22$0000000000|1|12|23">
                                                         <span class="seatNum">N21</span>
                                                         <img src="img/seat.svg" />
                                                     </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank empty">
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank" onclick="javascript:ToggleSeats('N22');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N22</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank selected" onclick="javascript:ToggleSeats('N21');">
-                                                        <input type="checkbox" name="chk" id="chk_N21"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N21" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="blank" onclick="javascript:ToggleSeats('N22');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N22</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank selected" onclick="javascript:ToggleSeats('N21');">
-                                                        <input type="checkbox" name="chk" id="chk_N21"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N21" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank empty">
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank" onclick="javascript:ToggleSeats('N22');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N22</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank selected" onclick="javascript:ToggleSeats('N21');">
-                                                        <input type="checkbox" name="chk" id="chk_N21"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N21" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="blank" onclick="javascript:ToggleSeats('N22');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N22</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank selected" onclick="javascript:ToggleSeats('N21');">
-                                                        <input type="checkbox" name="chk" id="chk_N21"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N21" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank empty">
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank" onclick="javascript:ToggleSeats('N22');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N22</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank selected" onclick="javascript:ToggleSeats('N21');">
-                                                        <input type="checkbox" name="chk" id="chk_N21"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N21" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="blank" onclick="javascript:ToggleSeats('N22');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N22</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank selected" onclick="javascript:ToggleSeats('N21');">
-                                                        <input type="checkbox" name="chk" id="chk_N21"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N21" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank empty">
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank" onclick="javascript:ToggleSeats('N22');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N22</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank selected" onclick="javascript:ToggleSeats('N21');">
-                                                        <input type="checkbox" name="chk" id="chk_N21"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N21" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="blank couple" onclick="javascript:ToggleSeats('N22');">
+                                                    <td class="blank org" onclick="javascript:ToggleSeats('N22');">
                                                         <input type="checkbox" name="chk" id="chk_N22"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N22" value="N-22$0000000000|1|12|23">
                                                         <span class="seatNum">N22</span>
                                                         <img src="img/seat.svg" />
                                                     </td>
-                                                    <td class="blank couple" onclick="javascript:ToggleSeats('N21');">
+
+                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
+                                                        <input type="checkbox" name="chk" id="chk_N20"
+                                                            style="display:none;"><input type="hidden" name="hdn"
+                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
+                                                        <span class="seatNum">N21</span>
+                                                        <!-- <img src="img/seat.svg" /> -->
+                                                          <img class="cust_icn" src="img/Toothless.svg" />
+                                                    </td>
+                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
+                                                        <input type="checkbox" name="chk" id="chk_N20"
+                                                            style="display:none;"><input type="hidden" name="hdn"
+                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
+                                                        <span class="seatNum">N21</span>
+                                                        <!-- <img src="img/seat.svg" /> -->
+                                                           <img class="cust_icn" src="img/Toothless.svg" />
+                                                    </td>
+                                                    <td class="blank empty">
+                                                        <img src="img/seat.svg" />
+                                                    </td>
+                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N22');"><input
+                                                            type="checkbox" name="chk" id="chk_N22"
+                                                            style="display:none;"><input type="hidden" name="hdn"
+                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
+                                                        <span class="seatNum">N22</span>
+                                                        <!-- <img src="img/seat.svg" /> -->
+                                                           <img class="cust_icn" src="img/Toothless.svg" />
+                                                    </td>
+                                                    <td class="blank taken"
+                                                        onclick="javascript:ToggleSeats('N21');">
+                                                        <input type="checkbox" name="chk" id="chk_N21"
+                                                            style="display:none;"><input type="hidden" name="hdn"
+                                                            id="hdn_N21" value="N-22$0000000000|1|12|23">
+                                                        <span class="seatNum">N21</span>
+                                                        <!-- <img src="img/seat.svg" /> -->
+                                                          <img class="cust_icn" src="img/Toothless.svg" />
+                                                    </td>
+                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
+                                                        <input type="checkbox" name="chk" id="chk_N20"
+                                                            style="display:none;"><input type="hidden" name="hdn"
+                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
+                                                        <span class="seatNum">N21</span>
+                                                        <!-- <img src="img/seat.svg" /> -->
+                                                          <img class="cust_icn" src="img/Toothless.svg" />
+                                                    </td>
+                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
+                                                        <input type="checkbox" name="chk" id="chk_N20"
+                                                            style="display:none;"><input type="hidden" name="hdn"
+                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
+                                                        <span class="seatNum">N21</span>
+                                                        <!-- <img src="img/seat.svg" /> -->
+                                                          <img class="cust_icn" src="img/Toothless.svg" />
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="blank selected green"
+                                                        onclick="javascript:ToggleSeats('N21');">
                                                         <input type="checkbox" name="chk" id="chk_N21"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N21" value="N-22$0000000000|1|12|23">
                                                         <span class="seatNum">N21</span>
                                                         <img src="img/seat.svg" />
                                                     </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
-                                                        <input type="checkbox" name="chk" id="chk_N20"
-                                                            style="display:none;"><input type="hidden" name="hdn"
-                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
-                                                        <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank empty">
-                                                        <img src="img/seat.svg" />
-                                                    </td>
-                                                    <td class="blank" onclick="javascript:ToggleSeats('N22');"><input
-                                                            type="checkbox" name="chk" id="chk_N22"
+                                                    <td class="blank org" onclick="javascript:ToggleSeats('N22');">
+                                                        <input type="checkbox" name="chk" id="chk_N22"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N22" value="N-22$0000000000|1|12|23">
                                                         <span class="seatNum">N22</span>
                                                         <img src="img/seat.svg" />
                                                     </td>
-                                                    <td class="blank selected" onclick="javascript:ToggleSeats('N21');">
+
+                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
+                                                        <input type="checkbox" name="chk" id="chk_N20"
+                                                            style="display:none;"><input type="hidden" name="hdn"
+                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
+                                                        <span class="seatNum">N21</span>
+                                                        <!-- <img src="img/seat.svg" /> -->
+                                                          <img class="cust_icn" src="img/Toothless.svg" />
+                                                    </td>
+                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
+                                                        <input type="checkbox" name="chk" id="chk_N20"
+                                                            style="display:none;"><input type="hidden" name="hdn"
+                                                            id="hdn_N20" value="N-22$0000000000|1|12|23">
+                                                        <span class="seatNum">N21</span>
+                                                        <!-- <img src="img/seat.svg" /> -->
+                                                          <img class="cust_icn" src="img/Toothless.svg" />
+                                                    </td>
+                                                    <td class="blank empty">
+                                                        <img src="img/seat.svg" />
+                                                    </td>
+                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N22');"><input
+                                                            type="checkbox" name="chk" id="chk_N22"
+                                                            style="display:none;"><input type="hidden" name="hdn"
+                                                            id="hdn_N22" value="N-22$0000000000|1|12|23">
+                                                        <span class="seatNum">N22</span>
+                                                         <!-- <img src="img/seat.svg" /> -->
+                                                          <img class="cust_icn" src="img/Toothless.svg" />
+                                                    </td>
+                                                    <td class="blank taken" onclick="javascript:ToggleSeats('N21');">
                                                         <input type="checkbox" name="chk" id="chk_N21"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N21" value="N-22$0000000000|1|12|23">
                                                         <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
+                                                        <!-- <img src="img/seat.svg" /> -->
+                                                          <img class="cust_icn" src="img/Toothless.svg" />
                                                     </td>
                                                     <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
                                                         <input type="checkbox" name="chk" id="chk_N20"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N20" value="N-22$0000000000|1|12|23">
                                                         <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
+                                                        <!-- <img src="img/seat.svg" /> -->
+                                                          <img class="cust_icn" src="img/Toothless.svg" />
                                                     </td>
                                                     <td class="blank taken" onclick="javascript:ToggleSeats('N20');">
                                                         <input type="checkbox" name="chk" id="chk_N20"
                                                             style="display:none;"><input type="hidden" name="hdn"
                                                             id="hdn_N20" value="N-22$0000000000|1|12|23">
                                                         <span class="seatNum">N21</span>
-                                                        <img src="img/seat.svg" />
+                                                        <!-- <img src="img/seat.svg" /> -->
+                                                          <img class="cust_icn" src="img/Toothless.svg" />
                                                     </td>
 
                                                 </tr>
 
 
-                                                <tr>
-                                                    <td></td>
-                                                </tr>
                                             </tbody>
                                         </table>
                                     </td>
@@ -549,8 +391,9 @@
                     <div class="clr"></div>
                     <div class="seatLegend" id="divSeatLegend" runat="server">
                         <div class=""><span class="seatAvai"></span>Available</div>
-                        <div class=""><span class="seatAvai taken"></span>Booked</div>
+                        <div class=""><span class="seatAvai taken"><img src="img/Toothless.svg"/></span>Booked</div>
                         <div class=""><span class="seatAvai selected"></span>Selected</div>
+                        <div class=""><span class="seatAvai dbox"></span>D-Box</div>
                         <div class=""><span class="seatAvai couple"></span>Couple</div>
                     </div>
                     <div class="clr"></div>
