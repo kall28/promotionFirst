@@ -94,7 +94,7 @@
                         <a href="#" class="list-group-item list-group-item-action" data-target="#content3">
                             <img src="images/icn_promo_vou.png" class="icon"> Voucher (3)
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action active" data-target="#content4">
+                        <a  data-bs-toggle="modal" data-bs-target="#signupModal" class="list-group-item list-group-item-action active" data-target="#content4">
                             <img src="images/icn_promo_cou.png" class="icon"> Promo Khusus Member (3)
                         </a>
                     </div>
@@ -371,6 +371,129 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="promoCardModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered signupModal">
+            <div class="modal-content card-modal">
+                <!-- <div class="modal-header">
+                   
+                    <button type="button" class="btn-brd" data-bs-dismiss="modal" aria-label="Close">
+                        <img src="images/icn_close1.svg" alt="Close Icon" class="icn" />
+                    </button>
+                </div> -->
+                <button type="button" class="btn-brd toggle-guest-modal" aria-label="Close">
+                <img src="images/icn_close1.svg" alt="Close Icon" class="icn" />
+            </button>
+                <div class="modal-body ">
+                    <div class="sign_hdr" id="loginForm">
+
+                        <div class="center">
+                            <h5 class="head" id="promoCardModalLabel">
+                                Yuk, Masuk Terlebih Dahulu <br> untuk Mendapatkan Promonya 
+                            </h5>
+                           
+                            <div class="title">Belum memiliki akun?  <a href="register.html">Daftar disini</a></div>
+                        </div>
+                        <!-- <div class="form_wrap" id="needs-validation" novalidate> -->
+                        <form class="form_wrap" id="needs-validation" novalidate="">
+                            <div class="form-group form-row-hdr">
+                                <label>Email</label>
+                                <input placeholder=" Enter your full name" required="">
+                                <div class="invalid-feedback">
+                                    Enter correct Email ID
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="active">Password</label>
+                                <input placeholder=" Enter your Password" required="" id="confirm-password" type="password">
+                                <a toggle="#confirm-password" class="field-icon toggle-password"><span class="material-icons">visibility_off</span>
+                                </a>
+                                <div class="invalid-feedback">
+                                    Enter correct Password
+                                </div>
+                            </div>
+                            <a class="title link">Lupa password?</a>
+                            <div class="captcha">
+                                <div class="form_row_chk">
+                                    <input class="checkbox" type="checkbox">
+                                    Saya bukan robot
+                                </div>
+                                <img class="icn" src="images/temp/recaptcha.png">
+                            </div>
+                            <a type="submit" href="about_membership.html" class="btn ">Masuk</a>
+                            <div class="strike_tx_hdr">
+                                <span>Atau Masuk Dengan</span>
+                            </div>
+                            <div class="form_row gap-2">
+                                <a href="" class="log-social-btn">
+                                    <img src="images/icn_google.png">
+                                </a>
+                                <a href="" class="log-social-btn">
+                                    <img src="images/icn_facebook.png">
+                                </a>
+                                <a href="" class="log-social-btn show-guest-form">
+                                    <img src="images/icn_guest.png">
+                                    Sebagai Tamu
+                                </a>
+                            </div>
+                        </form>
+                        </div>
+
+                        <!-- guest modal -->
+                         <div class="guest_modal sign_hdr" id="guestForm" style="display: none;">
+                            <div class="center">
+                                <h5 class="head" id="promoCardModalLabel">
+                                    Yuk, Masuk Terlebih Dahulu <br> untuk Mendapatkan Promonya 
+                                </h5>
+                            </div>
+                        <form class="form_wrap" id="needs-validation" novalidate="">
+                            <div class="form-group form-row-hdr">
+                                <label>Nama Depan</label>
+                                <input placeholder="Rizky Rahman" required="">
+                                <div class="invalid-feedback">
+                                    Rizky Rahman
+                                </div>
+                            </div>
+                            <div class="form-group form-row-hdr">
+                                <label>Email </label>
+                                <input placeholder="rizkyrahman@suitmedia.com" required="">
+                                <div class="invalid-feedback">
+                                    Enter correct Email ID
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="active">Nomor Telfon</label>
+                                <input placeholder="0821312312312342" required="" id="confirm-password" type="password">
+                                <a toggle="#confirm-password" class="field-icon toggle-password"><span class="material-icons">visibility_off</span>
+                                </a>
+                                <div class="invalid-feedback">
+                                    0821312312312342
+                                </div>
+                            </div>
+                           
+                            <a type="submit" href="about_membership.html" class="btn ">Masuk Sebagai Tamu</a>
+                            <div class="strike_tx_hdr">
+                                <span>Atau Masuk Dengan</span>
+                            </div>
+                            <div class="form_row gap-2">
+                               
+                                <a href="" class="log-social-btn show-login-form">
+                                    Masuk
+                                </a>
+                                <a href="" class="log-social-btn">
+                                  
+                                    Daftar
+                                </a>
+                            </div>
+                        </form>
+
+
+
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- modal end-->
@@ -473,6 +596,29 @@
             });
         });
 
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.toggle-guest-modal').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $('#loginForm').hide();
+                $('#guestForm').show();
+            });
+
+            $('.show-guest-form').on('click', function (e) {
+                e.preventDefault();
+                $('#loginForm').hide();
+                $('#guestForm').show();
+            });
+
+            $('.show-login-form').on('click', function (e) {
+                e.preventDefault();
+                $('#guestForm').hide();
+                $('#loginForm').show();
+            });
+        });
     </script>
 
 

@@ -1,0 +1,127 @@
+.outer {
+    margin: 0 auto;
+    max-width: 100%;
+    position: relative;
+    height: 690px;
+    width: 1322px;
+}
+
+.outer .owl-theme .owl-nav [class*='owl-'].disabled:hover {
+    background-color: transparent;
+}
+
+.thumbs {
+    position: absolute;
+    bottom: 200px;
+    width: 690px;
+    left: 100px;
+}
+
+.thumbs .owl-theme .owl-dots {
+    position: absolute;
+    left: 100px;
+}
+
+/* #big .item {
+    background: #ec6e46;
+    padding: 120px 0px;
+    margin: 2px;
+    color: #FFF;
+    border-radius: 3px;
+    text-align: center;
+} */
+/* 
+#thumbs .owl-stage-outer .owl-stage{
+    width: 300px !important;
+
+} */
+#thumbs .owl-stage-outer,
+#JumoThumb .owl-stage-outer,
+#vipThumbs .owl-stage-outer,
+#ultraThumbs .owl-stage-outer,
+#juniThumbs .owl-stage-outer {
+    width: 590px;
+    position: absolute;
+    top: -30px;
+    right: 80px;
+}
+
+.owl-theme .owl-dots {
+    display: flex;
+    flex-direction: column;
+    left: 20px;
+    position: relative;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 50px;
+}
+
+#thumbs .item,
+#JumoThumb .item,
+#vipThumbs .item,
+#ultraThumbs .item,
+#juniThumbs .item {
+    background: #C9C9C9;
+    height: 150px;
+    width: 150px;
+    line-height: 70px;
+    padding: 0px;
+    margin: 2px;
+    color: #FFF;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#thumbs .item h1 {
+    font-size: 18px;
+}
+
+#thumbs .current .item,
+#JumoThumb .current .item,
+#vipThumbs .current .item,
+#ultraThumbs .current .item,
+#juniThumbs .current .item {
+    border: 2px solid var(--white);
+}
+
+.owl-theme .owl-nav [class*='owl-'] {
+    transition: all .3s ease;
+}
+
+.owl-theme .owl-nav [class*='owl-'].disabled:hover {
+    background-color: #D6D6D6;
+}
+
+#big.owl-theme,
+#juniBig.owl-theme,
+#ultraBig.owl-theme,
+#vipBig.owl-theme,
+#JumoBig.owl-theme {
+    position: relative;
+}
+
+#big.owl-theme .owl-next, #big.owl-theme .owl-prev {
+    background: #333;
+    width: 22px;
+    line-height: 40px;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+}
+
+#big.owl-theme .owl-prev {
+    left: 10px;
+}
+
+#big.owl-theme .owl-next {
+    right: 10px;
+}
+
+#thumbs.owl-theme .owl-next, #thumbs.owl-theme .owl-prev {
+    background: #333;
+}
