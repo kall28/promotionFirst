@@ -1126,8 +1126,12 @@ header {
 	/* background: url(../../images/ft_bg.jpg);
     background-repeat: no-repeat; */
 	/* height: 244px; */
+	padding-bottom: 2rem;
 }
 
+#footer {
+	padding-bottom: 2rem;
+}
 
 .cine_wrap .cine_img {}
 
@@ -1824,6 +1828,11 @@ header {
 	font-size: var(--ft16);
 	text-align: center;
 	width: 100%;
+}
+
+/* footer padding when seat_handlr.bt_widget is enabled - only on container to avoid double gap */
+.has-seat-widget #footer {
+	padding-bottom: 6rem;
 }
 
 .legend img {
