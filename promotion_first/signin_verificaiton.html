@@ -50,9 +50,21 @@
 
     <main class="page-wrapper">
         <div id="header_inside"></div>
-        <section class="sign_wrap_veri page_hdr">
+        <section class="sign_wrap_veri page_hdr mb-4">
             <a class="head_icn" href=""><img class="" src="images/icn_arrow_up.svg" /></a>
-            <div class="sign_veri_hdr otp_hdr">
+            <!-- Payment Successful -->
+            <div class="payment-success-banner text-center" style="display:none;">
+                <div class="payment-success-icon">
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="30" stroke="#4781FF" stroke-width="3" fill="none" />
+                        <path d="M20 33L28 41L44 23" stroke="#0a47a9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                    </svg>
+                </div>
+                <h3 class="payment-success-head">Payment Successful</h3>
+                <p class="payment-success-subtitle">Please complete verification</p>
+            </div>
+
+            <div class="sign_veri_hdr otp_hdr h">
                 <div class="content">
                     <div class="head">OTP Code Verification </div>
                     <div class="veri_hdr">
@@ -116,7 +128,17 @@
 
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var banner = document.querySelector('.payment-success-banner');
+            var fromSource = sessionStorage.getItem('fromSource');
+            console.log('Verification page source:', fromSource);
 
+            if (fromSource === 'promo-member') {
+                banner.style.display = 'block';
+                sessionStorage.removeItem('fromSource');
+                console.log('Payment success banner shown');
+            }
+        });
     </script>
 </body>
 

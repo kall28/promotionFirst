@@ -4123,7 +4123,7 @@ span.cont_tnc a {
 .sign_wrap_veri .sign_veri_hdr {
 	margin: auto;
 	width: 500px;
-	height: 300px;
+	/* height: 500px; */
 	margin-top: 110px;
 }
 
@@ -4310,6 +4310,48 @@ span.cont_tnc a {
 /* verification end */
 
 /* promotion */
+.voucher_code_wrap {
+	margin-top: 20px;
+}
+
+.voucher_code_wrap h4 {
+	font-weight: 700;
+	margin-bottom: 12px;
+}
+
+.voucher_input_group {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.voucher_code_wrap .form-control {
+	background-color: var(--black_50);
+	border: 1px solid var(--black_100);
+	border-radius: 12px;
+	padding: 16px 20px;
+	font-size: var(--ft16);
+	color: var(--black_400);
+	flex: 1;
+}
+
+.voucher_code_wrap .form-control:focus {
+	border-color: var(--primary);
+	outline: none;
+}
+
+.voucher_code_wrap .btn_apply {
+	background-color: var(--primary);
+	color: var(--white);
+	border: none;
+	border-radius: 12px;
+	padding: 16px 28px;
+	font-size: var(--ft16);
+	font-weight: 600;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
 .promo_wrap {
 	margin-top: 60px;
 }
@@ -8975,6 +9017,11 @@ iframe#launcher {
 	text-align: left;
 
 }
+.promo-info-Membr{
+		font-size: var(--ft12);
+		font-weight: 700;
+		color: #DB34F2;
+}
 
 .promo-card .promo-info .tnc {
 	color: var(--secndary);
@@ -9429,6 +9476,23 @@ iframe#launcher {
 .promo_modlBnk .card-type {
 	display: flex;
 	gap: 10px;
+	align-items: center;
+}
+
+.promo_modlBnk .card-type-select {
+	border: none;
+	background: transparent;
+	font-size: var(--ft16);
+	font-weight: 500;
+	color: var(--black);
+	appearance: auto;
+	padding: 4px 8px;
+	cursor: pointer;
+	width: 100%;
+}
+
+.promo_modlBnk .card-type-select:focus {
+	outline: none;
 }
 
 .promo_modlBnk .form-row {
@@ -9437,7 +9501,27 @@ iframe#launcher {
 }
 
 .promo_modlBnk .btn {
-	width: 150px;
+	width: 100%;
+}
+
+.promo_modlBnk .card-number-inputs {
+	display: flex;
+	gap: 12px;
+}
+
+.promo_modlBnk .card-number-inputs input {
+	flex: 1;
+	text-align: center;
+	letter-spacing: 4px;
+	font-size: var(--ft16);
+	padding: 12px 10px;
+	border: 1px solid var(--black_100);
+	border-radius: var(--radius);
+}
+
+.promo_modlBnk .card-number-inputs input:focus {
+	border-color: var(--primary);
+	outline: none;
 }
 
 .od_hdr .promo-card {
@@ -9570,6 +9654,262 @@ iframe#launcher {
 }
 /* promotion first end */
 
+
+
+/* ===== Promo Member Modal ===== */
+.promo-member-modal .modal-dialog {
+    max-width: 420px;
+}
+
+.promo-member-modal .modal-content {
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+}
+
+.promo-member-modal .promo-member-body {
+    background: linear-gradient(180deg, #d6e8f7 0%, #eaf2fb 50%, #f5f0ec 100%);
+}
+
+.promo-member-modal .promo-member-close {
+    top: 16px;
+    right: 16px;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.promo-member-modal .promo-member-title {
+    color: #2a6cb6;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.promo-member-modal .promo-member-heading {
+    color: #1a1a2e;
+    font-weight: 900;
+    font-size: var(--ft48);
+    line-height: 1;
+    letter-spacing: 1px;
+    background: linear-gradient(341deg, #08285B 12.59%, #1155C1 87.41%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.promo-member-modal .promo-member-subtitle {
+    color: #4a5568;
+    font-size: 15px;
+}
+
+.promo-member-modal .btn_brd_second {
+    padding: 12px 60px;
+    border-radius: 50px;
+    border-width: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.promo-member-modal .btn_brd_second:hover {
+    background: var(--secndary);
+    color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+    .promo-member-modal .modal-dialog {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .promo-member-modal .promo-member-heading {
+        font-size: 26px;
+    }
+
+    .promo-member-modal .promo-member-title {
+        font-size: 18px;
+    }
+
+    .promo-member-modal .btn_brd_second {
+        padding: 10px 40px;
+        font-size: 14px;
+    }
+}
+
+/* ===== End Promo Member Modal ===== */
+
+/* ===== Promo Member Page ===== */
+.promo-member-page {
+    max-width: 480px;
+    /* margin: 0 auto; */
+    /* padding-bottom: 40px; */
+}
+
+.promo-member-banner {
+    /* background: linear-gradient(180deg, #08285B 0%, #1a4a8a 100%); */
+    text-align: center;
+    /* padding: 50px 30px 40px; */
+    /* border-radius: 0 0 30px 30px; */
+}
+
+.promo-member-logo {
+    width: 140px;
+    margin-bottom: 20px;
+}
+
+.promo-member-banner-title {
+    color: var(--white);
+    font-size: var(--ft22);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.promo-member-banner-heading {
+    color: var(--white);
+    font-size: 62px;
+    font-weight: 900;
+    letter-spacing: 0px;
+    line-height: 1;
+    margin-bottom: 20px;
+    background: linear-gradient(341deg, #08285B 12.59%, #1155C1 87.41%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.promo-member-banner-subtitle {
+    /* color: var(--white); */
+    font-size: var(--ft22);
+    opacity: 0.85;
+    line-height: 1;
+}
+
+.promo-member-offer {
+    text-align: center;
+}
+
+.promo-member-offer-title {
+    color: var(--secndary);
+    font-size: var(--ft22);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    background: linear-gradient(341deg, #08285B 12.59%, #1155C1 87.41%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.promo-member-offer-point {
+    color: var(--primary);
+    font-size: var(--ft16);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.promo-member-cta {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: var(--ft18);
+    font-weight: 600;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.promo-member-cta:hover {
+    background-color: var(--secndary);
+    color: var(--white);
+}
+
+.promo-member-tnc {
+    margin: 20px 20px 0;
+}
+
+.promo-member-tnc-head {
+    color: var(--black);
+    font-size: var(--ft16);
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.promo-member-tnc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.promo-member-tnc-list li {
+    position: relative;
+    padding-left: 16px;
+    color: var(--black_200);
+    font-size: var(--ft14);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.promo-member-tnc-list li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: var(--black_200);
+}
+
+@media only screen and (max-width: 480px) {
+    .promo-member-page {
+        max-width: 100%;
+    }
+
+    .promo-member-banner {
+        padding: 40px 20px 30px;
+    }
+
+    .promo-member-banner-heading {
+        font-size: var(--ft40);
+    }
+
+    .promo-member-offer {
+        padding: 30px 20px 20px;
+    }
+
+    .promo-member-tnc {
+        margin: 20px 16px 0;
+    }
+}
+
+/* ===== End Promo Member Page ===== */
+
+/* ===== Payment Success Banner ===== */
+.payment-success-banner {
+    background-color: var(--secndary_100);
+    border-radius: 12px;
+    padding: 40px 30px;
+    margin-bottom: 30px;
+}
+
+.payment-success-icon {
+    margin-bottom: 16px;
+}
+
+.payment-success-head {
+    color: var(--primary);
+    font-size: var(--ft24);
+    font-weight: 800;
+    /* font-style: italic; */
+    margin-bottom: 4px;
+}
+
+.payment-success-subtitle {
+    color: var(--primary);
+    font-size: var(--ft16);
+    margin-bottom: 0;
+}
+/* ===== End Payment Success Banner ===== */
 
 /* mobile */
 @media only screen and (max-width:1366px) {

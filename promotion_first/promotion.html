@@ -81,6 +81,13 @@
                 </div>
             </div>
         </section>
+        <div class="page_hdr voucher_code_wrap w-75 m-auto">
+            <h4>Masukkan Kode</h4>
+            <div class="voucher_input_group">
+                <input type="text" class="form-control" placeholder="Masukkan Kode Voucher" aria-label="Masukkan Kode Voucher" tabindex="0">
+                <button type="button" class="btn_apply" aria-label="Apply voucher code" tabindex="0">Apply</button>
+            </div>
+        </div>
         <section>
             <div class="page_hdr my-4 promoList_wrap">
                 <div class="col-md-3">
@@ -155,6 +162,9 @@
                                     <img src="images/icn_promo_bank.jpg" alt="Promo" class="promo-img d-none">
                                     <div class="promo-content">
                                         <div class="promo-info">
+                                <div class="promo-info-Membr">*Members Only</div>
+
+                                            
                                             <h5><strong>Diskon 15rb Bayar Pakai Gopay</strong></h5>
                                             <h5 class="d-none"><strong>Diskon 15rb Bayar Pakai Debit Mandiri</strong>
                                             </h5>
@@ -311,15 +321,10 @@
 
             </div>
             <div class="btn_wrap">
-                <button class="btn me-2 d-flex align-items-center justify-content-center px-4" onclick="window.location.href='seatLayout.html'">
+                <button class="btn me-2 d-flex align-items-center justify-content-center px-4" id="btnPromoContinu">
                     <img src="images/icn_cart.svg" />
                     Pilih Kursi</button>
-
-
             </div>
-            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#promoCardModal">
-                Buka Form Kartu
-            </button> -->
 
         </div>
 
@@ -345,26 +350,23 @@
                         <div class="card-form">
                             <div class="card-type">
                                 <img src="images/icn_card.svg" alt="Card Icon" class="icn" />
-                                <span>Debit/Kartu Kredit</span>
+                                <select class="card-type-select" aria-label="Pilih tipe kartu" tabindex="0">
+                                    <option value="debit">Debit/Kartu Kredit</option>
+                                    <option value="debit">Debit</option>
+                                    <option value="kredit">Kartu Kredit</option>
+                                </select>
                             </div>
 
                             <div class="form-group">
                                 <label>Nomor Kartu</label>
-                                <input type="text" class="form-control" placeholder="1234 1234 1234 1234">
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label>Tanggal Kadaluarsa</label>
-                                    <input type="text" class="form-control" placeholder="10/25">
-                                </div>
-                                <div class="form-group">
-                                    <label>CVV</label>
-                                    <input type="text" class="form-control" placeholder="123">
+                                <div class="card-number-inputs">
+                                    <input type="text" class="form-control" placeholder="1 2 3 4" maxlength="4" aria-label="Card number part 1" tabindex="0">
+                                    <input type="text" class="form-control" placeholder="X X X X X X" maxlength="6" aria-label="Card number part 2" tabindex="0">
+                                    <input type="text" class="form-control" placeholder="1 2 3 4 5 6" maxlength="6" aria-label="Card number part 3" tabindex="0">
                                 </div>
                             </div>
 
-                            <button class="btn mt-3">Lanjutkan</button>
+                            <button class="btn mt-3" onclick="window.location.href='seatLayout.html'">Lanjutkan</button>
                         </div>
                     </div>
                 </div>
@@ -536,15 +538,28 @@
 
     <script>
         $(document).ready(function () {
-            // When promo radio button is selected
+            var isBankPromoSelected = false;
+
             $(document).on('change', 'input[name="promo"]', function () {
                 $('#promo-footer').addClass('show');
+                var activeTab = $('.tab-pane.show.active').attr('id');
+                isBankPromoSelected = (activeTab === 'content2');
+                console.log('Promo selected, isBankPromo:', isBankPromoSelected, 'activeTab:', activeTab);
             });
 
-            // When close button is clicked
             $(document).on('click', '.close-footer', function () {
                 $('#promo-footer').removeClass('show');
                 $('input[name="promo"]').prop('checked', false);
+                isBankPromoSelected = false;
+            });
+
+            $(document).on('click', '#btnPromoContinu', function () {
+                console.log('Continue clicked, isBankPromo:', isBankPromoSelected);
+                if (isBankPromoSelected) {
+                    $('#promoCardModal').modal('show');
+                } else {
+                    window.location.href = 'seatLayout.html';
+                }
             });
         });
 
