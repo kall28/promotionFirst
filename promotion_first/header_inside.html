@@ -53,9 +53,13 @@
           <img src="images/icn_bking.svg" />
           My Bookings
         </a>
-        <div class="nav_btn_top_hdr ">
-          <a class="btn log_reg_hdr" href="register.html">Join Us</a>
-          <div class="log_hdr">
+        <div class="nav_btn_top_hdr header-auth-wrap">
+          <div id="header-auth-guest" class="header-auth-guest">
+            <a href="signin.html" class="link" aria-label="Login">Login</a>
+            <span>|</span>
+            <a class="btn log_reg_hdr" href="register.html">Register</a>
+          </div>
+          <div id="header-auth-loggedin" class="log_hdr header-auth-loggedin" style="display: none;">
             <a href="my-bookinngs.html" class="link">
               <span class="log_initial">R</span>
               <div class="log_name">
@@ -66,6 +70,8 @@
                 </div>
               </div>
             </a>
+            <span>|</span>
+            <a href="#" class="link header-logout" aria-label="Logout">Logout</a>
           </div>
         </div>
       </div>
@@ -128,9 +134,13 @@
         </div>
       </li>
       <li class="">
-        <div class="nav_btn_top_hdr ">
-          <a class="btn log_reg_hdr" href="register.html">Join Us</a>
-          <div class="log_hdr">
+        <div class="nav_btn_top_hdr header-auth-wrap">
+          <div id="header-auth-guest-mob" class="header-auth-guest">
+            <a href="signin.html" class="link">Login</a>
+            <span>|</span>
+            <a class="btn log_reg_hdr" href="register.html">Register</a>
+          </div>
+          <div id="header-auth-loggedin-mob" class="log_hdr header-auth-loggedin" style="display: none;">
             <a href="my-bookinngs.html" class="link">
               <span class="log_initial">R</span>
               Rizky
@@ -140,6 +150,8 @@
               <img class="invert " src="images/icn_points.svg" />
               200
             </a>
+            <span>|</span>
+            <a href="#" class="link header-logout">Logout</a>
           </div>
         </div>
       </li>

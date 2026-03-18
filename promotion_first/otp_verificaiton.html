@@ -50,64 +50,43 @@
 
     <main class="page-wrapper">
         <div id="header_inside"></div>
-        <section class="sign_wrap" style="background: url(../../images/sign_bg.jpg);
-        background-repeat: no-repeat;">
-            <div class="sign_banr">
+        <section class="sign_wrap_veri page_hdr">
+            <a class="head_icn" href="signin_verificaiton.html"><img class="" src="images/icn_arrow_up.svg" /></a>
+            <div class="sign_veri_hdr otp_hdr">
                 <div class="content">
-                    <div class="head">Ola, Moviegoers! </div>
+                    <div class="head">OTP Code Verification </div>
+                    <div class="veri_hdr">
+                        <div class="mob_veri">
+                            <div class="title">1. Mobile</div>
+                            <hr class="active" />
+                        </div>
+                        <div class="eml_veri">
+                            <div class="title">2. Email </div>
+                            <hr class="" />
+                        </div>
+                    </div>
+
+                    <p class="title">We have sent an OTP to <strong>+622334176777</strong>. Please fill OTP Code in the
+                        field below.</p>
+                </div>
+
+                <div class="pin-wrapper">
+                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                    <input type="text" data-role="pin" maxlength="1" class="pin-input">
+                </div>
+                <!-- <div class="pin"></div> -->
+                <div class="pin_otp_hdr">
+                    <div class="title">0:90</div>
                     <div class="title">
-                        Welcome to the right place for an immersive movie experience
+                        Not Receiving OTP Code? <a href="" class="link">Resend</a>
                     </div>
+                    <a class="btn" href="reistration_sucess.html">
+                        Submit
+                    </a>
                 </div>
-            </div>
-            <div class="sign_hdr">
-                <div class="center">
-                    <div class="head">
-                        Log in
-                    </div>
-                    <div class="title">Don’t have an account? <a href="register.html">Sign up</a></div>
-                </div>
-                <!-- <div class="form_wrap" id="needs-validation" novalidate> -->
-                <form class="form_wrap" id="needs-validation" novalidate>
-                    <div class="form-group form-row-hdr">
-                        <label>Email</label>
-                        <input placeholder=" Enter your full name" required />
-                        <div class="invalid-feedback">
-                            Enter correct Email ID
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Password</label>
-                        <input placeholder=" Enter your Password" required id='confirm-password' type="password" />
-                        <a toggle="#confirm-password" class="field-icon toggle-password"><span
-                                class="material-icons">visibility_off</span>
-                        </a>
-                        <div class="invalid-feedback">
-                            Enter correct Password
-                        </div>
-                    </div>
-                    <a class="title link">Forgot password?</a>
-                    <div class="captcha">
-                        <div class="form_row_chk">
-                            <input class="checkbox" type="checkbox" />
-                            I’m not a robot
-                        </div>
-                        <img class="icn" src="images/temp/recaptcha.png">
-                    </div>
-                    <button type="submit" class="btn ">Log in</button>
-                    <div class="strike_tx_hdr">
-                        <span>or sign in with</span>
-                    </div>
-                    <div class="form_row">
-                        <a href="" class="log-social-btn">
-                            <img src="images/icn_google.png" />
-                        </a>
-                        <a href="" class="log-social-btn">
-                            <img src="images/icn_facebook.png" />
-                        </a>
-                    </div>
-                </form>
-                <!-- </div> -->
             </div>
         </section>
         <!-- Footer-->
@@ -137,22 +116,7 @@
 
 
     <script>
-        function handleSigninSubmit(e) {
-            e.preventDefault();
-            sessionStorage.setItem("isLoggedIn", "true");
-            if (typeof updateHeaderAuthState === "function") {
-                updateHeaderAuthState();
-            }
-            if (typeof console !== "undefined" && console.log) {
-                console.log("Login success, header updated");
-            }
-            window.location.href = "promotion.html";
-        }
-        document.addEventListener("DOMContentLoaded", function () {
-            var form = document.getElementById("needs-validation");
-            if (!form) return;
-            form.addEventListener("submit", handleSigninSubmit);
-        });
+
     </script>
 </body>
 

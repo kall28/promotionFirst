@@ -45,7 +45,7 @@
   <!-- pre-loader end -->
 
   <main class="page-wrapper np" style="background-image: url(../../images/static/home_bg.jpg);">
-    <div id="header"></div>
+    <div id="header_inside"></div>
     <!-- <div class="swiper-container banner_wrap"> -->
     <div class="banner_wrap banner_wrap_car owl-carousel">
       <div class="banner_hdr">
@@ -104,10 +104,10 @@
     </div>
     <section class="search_wrap">
       <div class="search_hdr">
-        <input placeholder="Search Movie, Cinema, City..." />
-        <button class="btn"><img src="images/icn_search.svg" /></button>
+        <input type="text" class="search-input" placeholder="Search Movie, Cinema, City..." aria-label="Search Movie, Cinema, City" id="indexSearchInput" />
+        <button class="btn" type="button"><img src="images/icn_search.svg" alt="" /></button>
       </div>
-      <div class="search_result">
+      <div class="search_result d-none" id="indexSearchResult">
         <div class="head">Recently Searched</div>
         <ul>
           <li>
@@ -677,9 +677,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      var memberPromoModal = new bootstrap.Modal(document.getElementById('memberPromoModal'));
-      memberPromoModal.show();
-      console.log('Member promo modal shown on page load');
+      var isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+      if (!isLoggedIn) {
+        var memberPromoModal = new bootstrap.Modal(document.getElementById('memberPromoModal'));
+        memberPromoModal.show();
+        if (typeof console !== 'undefined' && console.log) {
+          console.log('Member promo modal shown on page load (not logged in)');
+        }
+      }
+      var searchInput = document.getElementById('indexSearchInput');
+      var searchResult = document.getElementById('indexSearchResult');
+      if (searchInput && searchResult) {
+        searchInput.addEventListener('click', function () {
+          searchResult.classList.remove('d-none');
+        });
+        searchInput.addEventListener('focus', function () {
+          searchResult.classList.remove('d-none');
+        });
+      }
     });
   </script>
 

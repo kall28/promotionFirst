@@ -111,42 +111,41 @@
         <div class="vLine"></div>
         <div class="selet_dt_hdr ">
           <div class="dateHdr owl-carousel">
-            <a class="dt_hdr " href="">
+            <a class="dt_hdr" href="" data-date="07/06/2025">
               <p>Jun</p>
               <p class="dt_bt">07</p>
               <p>Today</p>
             </a>
-            <a class="dt_hdr " href="">
+            <a class="dt_hdr" href="" data-date="08/06/2025">
               <p>Jun</p>
               <p class="dt_bt">08</p>
               <p>Tomorrow</p>
             </a>
-            <a class="dt_hdr active" href="">
+            <a class="dt_hdr active" href="" data-date="09/06/2025">
               <p>Jun</p>
               <p class="dt_bt">09</p>
               <p>Monday</p>
             </a>
-            <a class="dt_hdr " href="">
+            <a class="dt_hdr" href="" data-date="10/06/2025">
               <p>Jun</p>
               <p class="dt_bt">10</p>
               <p>Tuesday</p>
             </a>
-            <a class="dt_hdr " href="">
+            <a class="dt_hdr" href="" data-date="11/06/2025">
               <p>Jun</p>
               <p class="dt_bt">11</p>
               <p>Wednesday</p>
             </a>
-            <a class="dt_hdr " href="">
+            <a class="dt_hdr" href="" data-date="12/06/2025">
               <p>Jun</p>
               <p class="dt_bt">12</p>
               <p>Thursday</p>
             </a>
-            <a class="dt_hdr " href="">
+            <a class="dt_hdr" href="" data-date="13/06/2025">
               <p>Jun</p>
               <p class="dt_bt">13</p>
               <p>Friday</p>
             </a>
-
           </div>
         </div>
       </div>
@@ -300,6 +299,30 @@
       </div>
     </section>
 
+    <div id="divSelSchDet" class="bt_widget" style="display: none;" aria-hidden="true">
+      <div class="content">
+        <div class="sub-head">Cinema Location</div>
+        <div class="title" id="selSchCinemaLocation">-</div>
+      </div>
+      <hr class="vLine">
+      <div class="content">
+        <div class="sub-head">Date</div>
+        <div class="title" id="selSchDate">-</div>
+      </div>
+      <hr class="vLine">
+      <div class="content">
+        <div class="sub-head">Cinema Type</div>
+        <div class="title" id="selSchCinemaType">-</div>
+      </div>
+      <hr class="vLine">
+      <div class="content">
+        <div class="sub-head">Time</div>
+        <div class="title" id="selSchTime">-</div>
+      </div>
+      <hr class="vLine">
+      <button type="button" class="btn" id="btnPilihSeat">Pilih Seat</button>
+    </div>
+
     <!-- <div class="bt_widget">
       <div class="content">
         <div class="sub-head">Cinema Location</div>
@@ -352,6 +375,81 @@
   <script defer src="assets/js/script.js"></script>
   <!-- font -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    (function () {
+      const divSelSchDet = document.getElementById('divSelSchDet');
+      const selCinemaLocation = document.getElementById('selSchCinemaLocation');
+      const selDate = document.getElementById('selSchDate');
+      const selCinemaType = document.getElementById('selSchCinemaType');
+      const selTime = document.getElementById('selSchTime');
+      const btnPilihSeat = document.getElementById('btnPilihSeat');
+
+      const getActiveDate = function () {
+        const activeDt = document.querySelector('.dateHdr .dt_hdr.active');
+        return activeDt && activeDt.getAttribute('data-date') ? activeDt.getAttribute('data-date') : '';
+      };
+
+      const getCinemaFromAccordion = function (schWrap) {
+        const accordionItem = schWrap.closest('.accordion-item');
+        if (!accordionItem) return '';
+        const h2 = accordionItem.querySelector('.accordion-button');
+        return h2 ? (h2.textContent || '').trim() : '';
+      };
+
+      const getCinemaTypeFromWrap = function (schWrap) {
+        const bld = schWrap.querySelector('.sch_pric .bld');
+        return bld ? (bld.textContent || '').trim() : '';
+      };
+
+      const handleTimeClick = function (e) {
+        const link = e.target.closest('a');
+        if (!link || link.classList.contains('disable')) return;
+        e.preventDefault();
+
+        const schDate = link.closest('.sch_date');
+        const schWrap = link.closest('.sch_wrap');
+        if (!schDate || !schWrap) return;
+
+        const time = (link.textContent || '').trim();
+        const cinemaLocation = getCinemaFromAccordion(schWrap);
+        const date = getActiveDate();
+        const cinemaType = getCinemaTypeFromWrap(schWrap);
+
+        selCinemaLocation.textContent = cinemaLocation || '-';
+        selDate.textContent = date || '-';
+        selCinemaType.textContent = cinemaType || '-';
+        selTime.textContent = time || '-';
+
+        divSelSchDet.style.display = '';
+        divSelSchDet.setAttribute('aria-hidden', 'false');
+
+        schDate.querySelectorAll('a').forEach(function (a) { a.classList.remove('active'); });
+        link.classList.add('active');
+
+        const scheduleId = link.getAttribute('data-schedule-id') || '';
+        const scheduleIndex = link.getAttribute('data-schedule-index') !== null ? link.getAttribute('data-schedule-index') : '0';
+        btnPilihSeat.onclick = function () {
+          if (window.MovieDetailHelper && typeof window.MovieDetailHelper.selectSchedule === 'function') {
+            window.MovieDetailHelper.selectSchedule(Number(scheduleIndex), scheduleId);
+          } else {
+            window.location.href = link.getAttribute('href') || 'promotion.html';
+          }
+        };
+
+        if (typeof console !== 'undefined' && console.log) {
+          console.log('Schedule selected:', { cinemaLocation: cinemaLocation, date: date, cinemaType: cinemaType, time: time });
+        }
+      };
+
+      document.addEventListener('click', function (e) {
+        const a = e.target.closest('.sch_date a');
+        if (a && !a.classList.contains('disable')) {
+          handleTimeClick(e);
+        }
+      });
+    })();
+  </script>
 
 </body>
 

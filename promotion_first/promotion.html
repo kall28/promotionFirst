@@ -92,7 +92,7 @@
             <div class="page_hdr my-4 promoList_wrap">
                 <div class="col-md-3">
                     <div class="list-group sidebar" id="promoSidebar">
-                        <a href="#" class="list-group-item list-group-item-action " data-target="#content1">
+                        <a href="#" class="list-group-item list-group-item-action active" data-target="#content1">
                             <img src="images/icn_promos.png" class="icon"> Tiket & Makanan Minuman (4)
                         </a>
                         <a href="#" class="list-group-item list-group-item-action" data-target="#content2">
@@ -101,7 +101,7 @@
                         <a href="#" class="list-group-item list-group-item-action" data-target="#content3">
                             <img src="images/icn_promo_vou.png" class="icon"> Voucher (3)
                         </a>
-                        <a  data-bs-toggle="modal" data-bs-target="#signupModal" class="list-group-item list-group-item-action active" data-target="#content4">
+                        <a href="#" class="list-group-item list-group-item-action " data-target="#content4" id="sidebarMemberPromo">
                             <img src="images/icn_promo_cou.png" class="icon"> Promo Khusus Member (3)
                         </a>
                     </div>
@@ -109,7 +109,7 @@
 
                 <div class="col-md-9">
                     <div class="tab-content">
-                        <div class="tab-pane tab-box show " id="content1">
+                        <div class="tab-pane tab-box show active" id="content1">
                             <h3 class="mb-4">Promo Tiket dan Makanan Minuman</h3>
 
                             <div class="promo-card_list">
@@ -204,7 +204,7 @@
                         <div class="tab-pane tab-box show " id="content2">
                             tab3
                         </div>
-                        <div class="tab-pane tab-box show active" id="content2">
+                        <div class="tab-pane tab-box show " id="content2">
                             <h3 class="mb-4">Promo Khusus Member</h3>
                             <div class="memb_wrapper">
                                 <div class="membership-card">
@@ -421,7 +421,7 @@
                                 </div>
                                 <img class="icn" src="images/temp/recaptcha.png">
                             </div>
-                            <a type="submit" href="about_membership.html" class="btn ">Masuk</a>
+                            <a href="#" class="btn" id="btnLoginMasuk">Masuk</a>
                             <div class="strike_tx_hdr">
                                 <span>Atau Masuk Dengan</span>
                             </div>
@@ -481,7 +481,7 @@
                                 <a href="" class="log-social-btn show-login-form">
                                     Masuk
                                 </a>
-                                <a href="" class="log-social-btn">
+                                <a href="register.html" class="log-social-btn">
                                   
                                     Daftar
                                 </a>
@@ -497,6 +497,27 @@
         </div>
     </div>
 
+    <div class="modal fade" id="memberOnlyPromoModal" tabindex="-1" aria-labelledby="memberOnlyPromoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered member-only-promo-modal">
+            <div class="modal-content card-modal">
+                <button type="button" class="btn-brd member-only-promo-close" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="images/icn_close1.svg" alt="Close" class="icn" />
+                </button>
+                <div class="modal-body member-only-promo-body">
+                    <div class="member-only-promo-icon" aria-hidden="true"></div>
+                    <h5 class="head member-only-promo-title" id="memberOnlyPromoModalLabel">Promo Ini Khusus Member</h5>
+                    <p class="member-only-promo-desc">Untuk menggunakan promo ini, silakan login atau daftar sebagai member.</p>
+                    <p class="member-only-promo-benefit"><strong>Jadi member hanya Rp 30.000 dan langsung dapat 35.000 poin!</strong></p>
+                    <p class="member-only-promo-sub">Nikmati promo & penawaran eksklusif member.</p>
+                    <div class="member-only-promo-actions">
+                        <button type="button" class="btn member-only-promo-btn" id="btnMemberOnlyLogin">Login Sekarang</button>
+                        <button type="button" class="btn member-only-promo-btn" id="btnMemberOnlyRegister">Daftar Membership (Rp 30.000)</button>
+                        <button type="button" class="btn member-only-promo-btn member-only-promo-btn-guest" id="btnMemberOnlyGuest">Lanjut sebagai Tamu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- modal end-->
     <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll><span
@@ -521,16 +542,24 @@
 
 
     <script>
+        function isHeaderNotLogin() {
+            var v = sessionStorage.getItem('isLoggedIn') === 'true';
+            window.isLoggedIn = v;
+            return !v;
+        }
         $(document).ready(function () {
+            window.isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
             $('#promoSidebar a').on('click', function (e) {
                 e.preventDefault();
-
+                var target = $(this).data('target');
+                if (target === '#content4' && isHeaderNotLogin()) {
+                    if (typeof updateHeaderAuthState === 'function') { updateHeaderAuthState(); }
+                    $('#memberOnlyPromoModal').modal('show');
+                    return;
+                }
                 $('#promoSidebar a').removeClass('active');
                 $(this).addClass('active');
-
                 $('.tab-box').removeClass('show active');
-
-                var target = $(this).data('target');
                 $(target).addClass('show active');
             });
         });
@@ -541,6 +570,13 @@
             var isBankPromoSelected = false;
 
             $(document).on('change', 'input[name="promo"]', function () {
+                var card = $(this).closest('.promo-card');
+                if (card.find('.promo-info-Membr').length && isHeaderNotLogin()) {
+                    $(this).prop('checked', false);
+                    if (typeof updateHeaderAuthState === 'function') { updateHeaderAuthState(); }
+                    $('#memberOnlyPromoModal').modal('show');
+                    return;
+                }
                 $('#promo-footer').addClass('show');
                 var activeTab = $('.tab-pane.show.active').attr('id');
                 isBankPromoSelected = (activeTab === 'content2');
@@ -554,6 +590,11 @@
             });
 
             $(document).on('click', '#btnPromoContinu', function () {
+                if (isHeaderNotLogin()) {
+                    if (typeof updateHeaderAuthState === 'function') { updateHeaderAuthState(); }
+                    $('#memberOnlyPromoModal').modal('show');
+                    return;
+                }
                 console.log('Continue clicked, isBankPromo:', isBankPromoSelected);
                 if (isBankPromoSelected) {
                     $('#promoCardModal').modal('show');
@@ -632,6 +673,36 @@
                 e.preventDefault();
                 $('#guestForm').hide();
                 $('#loginForm').show();
+            });
+
+            $('#btnMemberOnlyLogin').on('click', function () {
+                $('#memberOnlyPromoModal').modal('hide');
+                $('#signupModal').modal('show');
+                $('#guestForm').hide();
+                $('#loginForm').show();
+            });
+            $('#btnLoginMasuk').on('click', function (e) {
+                e.preventDefault();
+                sessionStorage.setItem('isLoggedIn', 'true');
+                if (typeof updateHeaderAuthState === 'function') {
+                    updateHeaderAuthState();
+                }
+                $('#signupModal').modal('hide');
+                if (typeof console !== 'undefined' && console.log) {
+                    console.log('Login success, header updated');
+                }
+            });
+            $('#btnMemberOnlyRegister').on('click', function () {
+                window.location.href = 'promo-member.html';
+            });
+            $('#btnMemberOnlyGuest').on('click', function () {
+                $('#memberOnlyPromoModal').modal('hide');
+                $('#signupModal').modal('show');
+                $('#loginForm').hide();
+                $('#guestForm').show();
+                if (typeof console !== 'undefined' && console.log) {
+                    console.log('Continue as guest, guest form shown');
+                }
             });
         });
     </script>

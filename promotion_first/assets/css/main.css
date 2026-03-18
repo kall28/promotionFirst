@@ -71,7 +71,9 @@ input:focus {
 .pt50 {
 	padding-top: 50px;
 }
-
+.mt-0{
+	margin-top: 0px !important;
+}
 .heading {
 	font-size: var(--ft40);
 	display: flex;
@@ -280,7 +282,7 @@ button {
 
 .header .nav_btn_top_hdr .link {
 	color: var(--white);
-	/*width: 200px;*/
+	/* width: 200px; */
 	/*border-bottom: 1px solid #ffffffb5;*/
 	text-align: left;
 	/*height: 30px;*/
@@ -318,6 +320,7 @@ button {
 .nav_btn_top_hdr .log_hdr .link {
 	display: flex;
 	align-items: center;
+	gap: 5px;
 }
 
 .nav_btn_top_hdr .log_hdr .log_name {
@@ -344,6 +347,9 @@ button {
 
 .nav_btn_top_hdr .log_reg_hdr {
 	display: none;
+}
+.header-auth-guest .log_reg_hdr {
+	display: inline-block;
 }
 
 .nav_btn_top_hdr {
@@ -373,7 +379,10 @@ header {
 	float: left;
 	font-size: var(--ft22);
 }
-
+.log_hdr {
+    display: flex;
+    align-items: center;
+}
 
 .header .nav_btn_top_hdr span {
 	margin: 0px 10px;
@@ -384,6 +393,12 @@ header {
 	margin: 0px 10px;
 	color: var(--white);
 	background-color: var(--secndary);
+	border-radius: 100px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .header .nav_btn_top {
@@ -4025,6 +4040,83 @@ span.cont_tnc a {
     right: -10px;
     top: -10px;
 }
+
+/* ========================================
+   Member Only Promo Modal (promotion page)
+   Modal shown when non-logged-in user selects member-only promo
+   ======================================== */
+.member-only-promo-modal .modal-dialog {
+	max-width: 400px;
+}
+.member-only-promo-modal .btn-brd.member-only-promo-close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 1;
+}
+.member-only-promo-body {
+	text-align: center;
+	padding: 2rem 1.5rem 1.5rem;
+}
+.member-only-promo-icon {
+	width: 64px;
+	height: 64px;
+	margin: 0 auto 1rem;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #e57373 0%, #ba68c8 40%, #ffb74d 100%);
+	position: relative;
+}
+.member-only-promo-icon::before,
+.member-only-promo-icon::after {
+	content: '';
+	position: absolute;
+	background: #fff;
+	border-radius: 50%;
+}
+.member-only-promo-icon::before {
+	width: 10px;
+	height: 10px;
+	top: 22px;
+	left: 18px;
+}
+.member-only-promo-icon::after {
+	width: 10px;
+	height: 10px;
+	top: 22px;
+	right: 18px;
+}
+.member-only-promo-title {
+	font-size: 1.25rem;
+	margin-bottom: 0.5rem;
+}
+.member-only-promo-desc {
+	color: #6c757d;
+	font-size: 0.9rem;
+	margin-bottom: 0.75rem;
+}
+.member-only-promo-benefit {
+	font-size: 0.95rem;
+	margin-bottom: 0.25rem;
+}
+.member-only-promo-sub {
+	color: #6c757d;
+	font-size: 0.85rem;
+	margin-bottom: 1.25rem;
+}
+.member-only-promo-actions {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+.member-only-promo-btn {
+	width: 100%;
+	padding: 0.65rem 1rem;
+	border-radius: 8px;
+	background: var(--primary);
+	color: #fff;
+	border: none;
+}
+/* Member Only Promo Modal end */
 
 .strike_tx_hdr {
 	font-size: var(--ft14);
