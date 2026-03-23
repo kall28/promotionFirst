@@ -60,6 +60,18 @@
         </div>
     <section class="banner_seat">
       <div class="banner_hdr">
+        <div id="selectedOfferBanner" class="seat_selected_offer_banner" role="status" aria-live="polite" hidden>
+          <div class="seat_selected_offer_inner">
+            <span class="seat_selected_offer_icon" aria-hidden="true"><img src="images/icn_warning.svg" alt=""></span>
+            <div class="seat_selected_offer_text">
+              <p class="seat_selected_offer_title" id="selectedOfferTitle"></p>
+              <p class="seat_selected_offer_hint" id="selectedOfferHint"></p>
+            </div>
+            <button type="button" class="seat_selected_offer_close" id="selectedOfferClose" aria-label="Tutup pemberitahuan promo" tabindex="0">
+              <img src="images/icn_close.svg" alt="">
+            </button>
+          </div>
+        </div>
         <div class="content">
           <h1>Ticket to Paradise</h1>
           <p>Romance, Comedy • 1h 55m</p>
@@ -495,6 +507,57 @@
   <script defer src="assets/js/custom.js"></script>
 
   <script defer src="assets/js/bootstrap.min.js"></script>
+  <script>
+    window.SeatLayoutHelper = window.SeatLayoutHelper || {
+      closeAlert: function () {
+        var el = document.getElementById('divSeatLayoutAlert');
+        if (el) {
+          el.setAttribute('hidden', '');
+          el.style.display = 'none';
+        }
+        console.log('SeatLayoutHelper.closeAlert');
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var banner = document.getElementById('selectedOfferBanner');
+      var titleEl = document.getElementById('selectedOfferTitle');
+      var hintEl = document.getElementById('selectedOfferHint');
+      var closeBtn = document.getElementById('selectedOfferClose');
+      if (!banner || !titleEl || !hintEl) {
+        return;
+      }
+
+      var promoTitle = sessionStorage.getItem('selectedPromoTitle');
+      var promoHint = sessionStorage.getItem('selectedPromoHint');
+      var dismissed = sessionStorage.getItem('seatSelectedOfferDismissed') === '1';
+
+      if (promoTitle && !dismissed) {
+        titleEl.textContent = promoTitle;
+        hintEl.textContent = promoHint || 'Pilih jumlah kursi kelipatan 2 untuk menggunakan voucher ini dan dapatkan diskon spesial!';
+        banner.removeAttribute('hidden');
+        console.log('selectedOfferBanner shown', promoTitle);
+      } else {
+        console.log('selectedOfferBanner hidden', { promoTitle: !!promoTitle, dismissed: dismissed });
+      }
+
+      var handleCloseOffer = function () {
+        banner.setAttribute('hidden', '');
+        sessionStorage.setItem('seatSelectedOfferDismissed', '1');
+        console.log('selectedOfferBanner dismissed');
+      };
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', handleCloseOffer);
+        closeBtn.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleCloseOffer();
+          }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

@@ -201,10 +201,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane tab-box show " id="content2">
-                            tab3
+                        <div class="tab-pane tab-box show " id="content3">
+                            <h3 class="mb-4">Voucher</h3>
+                            <p class="text-muted">Pilih voucher dari daftar promo.</p>
                         </div>
-                        <div class="tab-pane tab-box show " id="content2">
+                        <div class="tab-pane tab-box show " id="content4">
                             <h3 class="mb-4">Promo Khusus Member</h3>
                             <div class="memb_wrapper">
                                 <div class="membership-card">
@@ -366,7 +367,7 @@
                                 </div>
                             </div>
 
-                            <button class="btn mt-3" onclick="window.location.href='seatLayout.html'">Lanjutkan</button>
+                            <button type="button" class="btn mt-3" id="btnBankPromoContinueSeat">Lanjutkan</button>
                         </div>
                     </div>
                 </div>
@@ -542,6 +543,50 @@
 
 
     <script>
+        function persistSelectedPromoForSeatPage() {
+            var $sel = $('input[name="promo"]:checked');
+            sessionStorage.removeItem('seatSelectedOfferDismissed');
+            if (!$sel.length) {
+                sessionStorage.removeItem('selectedPromoTitle');
+                sessionStorage.removeItem('selectedPromoHint');
+                console.log('persistSelectedPromoForSeatPage: no selection');
+                return;
+            }
+            var card = $sel.closest('.promo-card');
+            var title = (card.find('.promo-info h5 strong').first().text() || card.find('.promo-info h5').first().text() || '').trim() || 'Promo';
+            var hint = (card.data('seatHint') || '').trim();
+            if (!hint) {
+                hint = 'Pilih jumlah kursi kelipatan 2 untuk menggunakan voucher ini dan dapatkan diskon spesial!';
+            }
+            sessionStorage.setItem('selectedPromoTitle', title);
+            sessionStorage.setItem('selectedPromoHint', hint);
+            console.log('persistSelectedPromoForSeatPage', title);
+        }
+
+        function showBsModal(selector) {
+            var el = document.querySelector(selector);
+            if (!el) {
+                console.log('showBsModal: element not found', selector);
+                return;
+            }
+            if (typeof bootstrap === 'undefined' || !bootstrap.Modal) {
+                console.log('showBsModal: bootstrap.Modal unavailable');
+                return;
+            }
+            bootstrap.Modal.getOrCreateInstance(el).show();
+        }
+
+        function hideBsModal(selector) {
+            var el = document.querySelector(selector);
+            if (!el || typeof bootstrap === 'undefined' || !bootstrap.Modal) {
+                return;
+            }
+            var inst = bootstrap.Modal.getInstance(el);
+            if (inst) {
+                inst.hide();
+            }
+        }
+
         function isHeaderNotLogin() {
             var v = sessionStorage.getItem('isLoggedIn') === 'true';
             window.isLoggedIn = v;
@@ -554,7 +599,7 @@
                 var target = $(this).data('target');
                 if (target === '#content4' && isHeaderNotLogin()) {
                     if (typeof updateHeaderAuthState === 'function') { updateHeaderAuthState(); }
-                    $('#memberOnlyPromoModal').modal('show');
+                    showBsModal('#memberOnlyPromoModal');
                     return;
                 }
                 $('#promoSidebar a').removeClass('active');
@@ -574,7 +619,7 @@
                 if (card.find('.promo-info-Membr').length && isHeaderNotLogin()) {
                     $(this).prop('checked', false);
                     if (typeof updateHeaderAuthState === 'function') { updateHeaderAuthState(); }
-                    $('#memberOnlyPromoModal').modal('show');
+                    showBsModal('#memberOnlyPromoModal');
                     return;
                 }
                 $('#promo-footer').addClass('show');
@@ -592,15 +637,21 @@
             $(document).on('click', '#btnPromoContinu', function () {
                 if (isHeaderNotLogin()) {
                     if (typeof updateHeaderAuthState === 'function') { updateHeaderAuthState(); }
-                    $('#memberOnlyPromoModal').modal('show');
+                    showBsModal('#memberOnlyPromoModal');
                     return;
                 }
                 console.log('Continue clicked, isBankPromo:', isBankPromoSelected);
                 if (isBankPromoSelected) {
-                    $('#promoCardModal').modal('show');
+                    showBsModal('#promoCardModal');
                 } else {
+                    persistSelectedPromoForSeatPage();
                     window.location.href = 'seatLayout.html';
                 }
+            });
+
+            $(document).on('click', '#btnBankPromoContinueSeat', function () {
+                persistSelectedPromoForSeatPage();
+                window.location.href = 'seatLayout.html';
             });
         });
 
@@ -676,8 +727,8 @@
             });
 
             $('#btnMemberOnlyLogin').on('click', function () {
-                $('#memberOnlyPromoModal').modal('hide');
-                $('#signupModal').modal('show');
+                hideBsModal('#memberOnlyPromoModal');
+                showBsModal('#signupModal');
                 $('#guestForm').hide();
                 $('#loginForm').show();
             });
@@ -687,7 +738,7 @@
                 if (typeof updateHeaderAuthState === 'function') {
                     updateHeaderAuthState();
                 }
-                $('#signupModal').modal('hide');
+                hideBsModal('#signupModal');
                 if (typeof console !== 'undefined' && console.log) {
                     console.log('Login success, header updated');
                 }
@@ -696,8 +747,8 @@
                 window.location.href = 'promo-member.html';
             });
             $('#btnMemberOnlyGuest').on('click', function () {
-                $('#memberOnlyPromoModal').modal('hide');
-                $('#signupModal').modal('show');
+                hideBsModal('#memberOnlyPromoModal');
+                showBsModal('#signupModal');
                 $('#loginForm').hide();
                 $('#guestForm').show();
                 if (typeof console !== 'undefined' && console.log) {
