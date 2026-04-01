@@ -362,7 +362,7 @@ header {
 	position: fixed;
 	top: 0px;
 	width: 100%;
-	z-index: 2;
+	z-index: 200;
 }
 
 .header .nav_btn_top_hdr .link .log_initial {
@@ -8239,6 +8239,7 @@ iframe#launcher {
 	text-align: right;
 	gap: 20px;
 	white-space: nowrap;
+	z-index: 1;
 }
 
 .prd_cart_wrap .list a {
@@ -9821,24 +9822,46 @@ iframe#launcher {
 
 /* ===== Promo Member Modal ===== */
 .promo-member-modal .modal-dialog {
-    max-width: 420px;
+    max-width: 550px;
 }
 
 .promo-member-modal .modal-content {
     border-radius: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
     border: none;
 }
 
 .promo-member-modal .promo-member-body {
     background: linear-gradient(180deg, #d6e8f7 0%, #eaf2fb 50%, #f5f0ec 100%);
+	border-radius: 20px;
 }
 
 .promo-member-modal .promo-member-close {
-    top: 16px;
-    right: 16px;
-    font-size: 14px;
-    opacity: 0.6;
+    top: -10px;
+    right: -10px;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background-color: #1155c1;
+    background-image: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    box-shadow: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.promo-member-modal .promo-member-close-icon {
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 600;
+    display: block;
+    transform: translateY(-1px);
 }
 
 .promo-member-modal .promo-member-title {
@@ -9851,9 +9874,8 @@ iframe#launcher {
 .promo-member-modal .promo-member-heading {
     color: #1a1a2e;
     font-weight: 900;
-    font-size: var(--ft48);
+    font-size: var(--ft40);
     line-height: 1;
-    letter-spacing: 1px;
     background: linear-gradient(341deg, #08285B 12.59%, #1155C1 87.41%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -9867,7 +9889,7 @@ iframe#launcher {
 
 .promo-member-modal .btn_brd_second {
     padding: 12px 60px;
-    border-radius: 50px;
+    border-radius: 10px;
     border-width: 2px;
     background: #fff;
     transition: all 0.3s ease;
@@ -9979,7 +10001,7 @@ iframe#launcher {
     color: var(--white);
     font-size: var(--ft18);
     font-weight: 600;
-    border-radius: 50px;
+    border-radius: 16px;
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease;
