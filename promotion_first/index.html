@@ -44,7 +44,7 @@
   </div> -->
   <!-- pre-loader end -->
 
-  <main class="page-wrapper np" style="background-image: url(../../images/static/home_bg.jpg);">
+  <main class="page-wrapper np" style="background-image: url(../../images/home_bg.jpg);    background-repeat: no-repeat; background-size: cover;">
     <div id="header_inside"></div>
     <!-- <div class="swiper-container banner_wrap"> -->
     <div class="banner_wrap banner_wrap_car owl-carousel">
@@ -104,7 +104,8 @@
     </div>
     <section class="search_wrap">
       <div class="search_hdr">
-        <input type="text" class="search-input" placeholder="Search Movie, Cinema, City..." aria-label="Search Movie, Cinema, City" id="indexSearchInput" />
+        <input type="text" class="search-input" placeholder="Search Movie, Cinema, City..."
+          aria-label="Search Movie, Cinema, City" id="indexSearchInput" />
         <button class="btn" type="button"><img src="images/icn_search.svg" alt="" /></button>
       </div>
       <div class="search_result d-none" id="indexSearchResult">
@@ -233,11 +234,16 @@
             <li class=" no-bg "><a href="#promoAll" class="active" aria-controls="home" role="tab" data-bs-toggle="tab">
                 All</a></li>
             <li class=""><a href="#promoTicket" aria-controls="home" role="tab" data-bs-toggle="tab">
-                <img src="images/icn_ticket.svg" /></a></li>
+                <img src="images/icn__popcorn.svg" />
+
+              </a> <span>F&B</span></li>
             <li><a href="#upcoming" aria-controls="profile" role="tab" data-bs-toggle="tab">
-                <img src="images/icn_fnb.svg" /></a></li>
+                <img src="images/icn__star.svg" />
+              </a><span>Spesial</span></li>
             <li><a href="#upcoming" aria-controls="profile" role="tab" data-bs-toggle="tab">
-                <img src="images/icn_favourite.svg" /></a></li>
+                <img src="images/icn__ticket.svg" />
+              </a> <span>Tiket</span>
+            </li>
           </ul>
 
         </div>
@@ -275,7 +281,7 @@
 
     </section>
 
-    <section class="mem_wrap ">
+    <!-- <section class="mem_wrap ">
       <div class="page_hdr">
         <div class="head-section ">
           <div class="headline">Join Our Membership</div>
@@ -307,7 +313,6 @@
                 <div class="title">Ticket Deals</div>
                 <div class="icon"><i> <img class="invert icn" src="images/icn_ticket2.svg" /></i></div>
               </li>
-              <!-- repeat -->
               <li class="block ">
                 <div class="title">Earn Points</div>
                 <div class="icon"> <i> <img class="invert icn" src="images/icn_card_pts.svg" /> </i> </div>
@@ -324,9 +329,6 @@
                 <div class="title">Ticket Deals</div>
                 <div class="icon"><i> <img class="invert icn" src="images/icn_ticket2.svg" /></i></div>
               </li>
-              <!-- <li class="block">
-                <div class="icon"><i class="fa fa-paw"></i><span> </span></div>
-              </li> -->
 
             </ul>
             <div class="animate-wrapper">
@@ -379,7 +381,6 @@
                   </div>
                 </div>
               </div>
-              <!-- repeat -->
               <div class="animate_content">
                 <div class="animate-more">
                   <div class="ani_cont_hdr">
@@ -432,12 +433,71 @@
 
 
             </div>
-            <!-- <div class="prev"><span>PREV</span></div>
-          <div class="next"><span>NEXT</span></div> -->
           </div>
         </div>
       </div>
+    </section> -->
+    
+    <section class="mem_join_section page_hdr" id="memJoinSection" aria-labelledby="memJoinHeading" style="background-image: url(./images/mem_bg.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <h2 class="headline text-center" id="memJoinHeading">Join Our Membership</h2>
+      <div class="tab_wrap mem_join_tabs">
+        <ul class="nav nav-tabs" id="memJoinTablist" role="tablist">
+          <li class="" role="presentation">
+            <a href="#memEarnPoints" class="active" id="memEarnPoints-tab" aria-controls="memEarnPoints"
+              aria-selected="true" role="tab" data-bs-toggle="tab">Earn Points</a>
+          </li>
+          <li role="presentation">
+            <a href="#memBirthday" id="memBirthday-tab" aria-controls="memBirthday" aria-selected="false" role="tab"
+              data-bs-toggle="tab">Birthday Gift</a>
+          </li>
+          <li role="presentation">
+            <a href="#memFnbDeals" id="memFnbDeals-tab" aria-controls="memFnbDeals" aria-selected="false" role="tab"
+              data-bs-toggle="tab">F&amp;B Deals</a>
+          </li>
+          <li role="presentation">
+            <a href="#memTicketDeals" id="memTicketDeals-tab" aria-controls="memTicketDeals" aria-selected="false"
+              role="tab" data-bs-toggle="tab">Ticket Deals</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="memEarnPoints" aria-labelledby="memEarnPoints-tab">
+            <div class="mem_join_panel text-center">
+              <img src="images/static/event_01.gif" alt="Earn membership points" />
+              <div class="mem_join_panel_title">Earn Points</div>
+              <p class="mem_join_panel_desc">Dapatkan poin lebih banyak dengan melakukan transaksi di Cinépolis.</p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="memBirthday" aria-labelledby="memBirthday-tab">
+            <div class="mem_join_panel text-center">
+              <img src="images/static/event_birthday.gif" alt="Birthday gift for members" />
+              <div class="mem_join_panel_title">Birthday Gift</div>
+              <p class="mem_join_panel_desc">Dapatkan hadiah spesial dari Cinépolis khusus di hari ulang tahunmu.</p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="memFnbDeals" aria-labelledby="memFnbDeals-tab">
+            <div class="mem_join_panel text-center">
+              <img src="images/static/event_fnb.gif" alt="Food and beverage member deals" />
+              <div class="mem_join_panel_title">F&amp;B Deals</div>
+              <p class="mem_join_panel_desc">Nikmati makanan dan minuman penawaran spesial khusus member.</p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="memTicketDeals" aria-labelledby="memTicketDeals-tab">
+            <div class="mem_join_panel text-center">
+              <img src="images/static/event_deals.gif" alt="Ticket deals for members" />
+              <div class="mem_join_panel_title">Ticket Deals</div>
+              <p class="mem_join_panel_desc">Get special offers with any movie ticket purchase at Cinépolis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn_center">
+        <div class="btn_hdr">
+          <a class="btn" href="promo-member.html" tabindex="0" aria-label="Join membership now">Join Now</a>
+          <a class="btn_brd_second" href="promo-member.html" tabindex="0" aria-label="Learn more about membership">Learn More</a>
+        </div>
+      </div>
     </section>
+
     <section class="cine_banr_wrap_main">
       <div class="cine_banr_wrap_main_hdr owl-carousel">
         <div class="cine_banr_wrap">
@@ -549,7 +609,7 @@
               </div>
               <div class="item">
                 <div class="content">
-                    <img src="images/temp/logo_macroxe.png" />
+                  <img src="images/temp/logo_macroxe.png" />
                   <div class="title">A luxury experience of watching the movie with fine dining</div>
                   <a href="" class="btn_brd_w">
                     Lihat Detail
@@ -559,7 +619,7 @@
               </div>
               <div class="item">
                 <div class="content">
-                    <img src="images/temp/logo_macroxe.png" />
+                  <img src="images/temp/logo_macroxe.png" />
                   <div class="title">A luxury experience of watching the movie with fine dining</div>
                   <a href="" class="btn_brd_w">
                     Lihat Detail
@@ -596,7 +656,7 @@
               </div>
               <div class="item">
                 <div class="content">
-                    <img src="images/temp/logo_macroxe.png" />
+                  <img src="images/temp/logo_macroxe.png" />
                   <div class="title">A luxury experience of watching the movie with fine dining</div>
                   <a href="" class="btn_brd_w">
                     Lihat Detail
@@ -606,7 +666,7 @@
               </div>
               <div class="item">
                 <div class="content">
-                    <img src="images/temp/logo_macroxe.png" />
+                  <img src="images/temp/logo_macroxe.png" />
                   <div class="title">A luxury experience of watching the movie with fine dining</div>
                   <a href="" class="btn_brd_w">
                     Lihat Detail
@@ -636,19 +696,20 @@
 
 
     <!-- Member Promo Modal -->
-    <div class="modal fade promo-member-modal" id="memberPromoModal" tabindex="-1" aria-labelledby="memberPromoModalLabel" aria-hidden="true">
+    <div class="modal fade promo-member-modal" id="memberPromoModal" tabindex="-1"
+      aria-labelledby="memberPromoModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-body text-center position-relative px-4 py-5 promo-member-body">
-            <button type="button" class="position-absolute promo-member-close" data-bs-dismiss="modal" aria-label="Close"
-              tabindex="0">
+            <button type="button" class="position-absolute promo-member-close" data-bs-dismiss="modal"
+              aria-label="Close" tabindex="0">
               <span aria-hidden="true" class="promo-member-close-icon">&times;</span>
             </button>
             <h4 class="mb-1 promo-member-title">GABUNG MEMBER,</h4>
             <h2 class="mb-3 promo-member-heading">LANGSUNG UNTUNG</h2>
             <p class="mb-4 promo-member-subtitle">Dapatkan banyak benefit eksklusif sakarang</p>
-            <a href="promo-member.html" class="btn_brd_second"
-              tabindex="0" aria-label="Baca selengkapnya tentang membership">
+            <a href="promo-member.html" class="btn_brd_second" tabindex="0"
+              aria-label="Baca selengkapnya tentang membership">
               Baca selengkapnya
             </a>
           </div>
@@ -695,6 +756,16 @@
         });
         searchInput.addEventListener('focus', function () {
           searchResult.classList.remove('d-none');
+        });
+      }
+      var memJoinTablist = document.getElementById('memJoinTablist');
+      if (memJoinTablist) {
+        memJoinTablist.querySelectorAll('[data-bs-toggle="tab"]').forEach(function (tabEl) {
+          tabEl.addEventListener('shown.bs.tab', function (e) {
+            if (typeof console !== 'undefined' && console.log) {
+              console.log('Membership tab active:', e.target.getAttribute('href'));
+            }
+          });
         });
       }
     });
